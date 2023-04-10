@@ -209,20 +209,6 @@ The personnel involved in the test campaign is shown in the following table.
 Mostafa Lutfi }
 } \\\hline
 \textbf{Test Cases} & \textbf{Assigned to} & \textbf{Executed by} & \textbf{Additional Test Personnel} \\ \hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2805}{LVV-T2805}
-& {\small Kevin Siruno } & {\small Kevin Siruno } &
-\begin{minipage}[]{6cm}
-\smallskip
-{\small \begin{itemize}
-\tightlist
-\item
-  Systems Engineer
-\item
-  Electrical Support
-\end{itemize} }
-\medskip
-\end{minipage}
-\\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2531}{LVV-T2531}
 & {\small Kevin Siruno } & {\small  } &
 \begin{minipage}[]{6cm}
@@ -509,11 +495,8 @@ Mostafa Lutfi }
 \multicolumn{2}{r}{ T. Plan \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testPlan/LVV-P95}{LVV-P95}:} &
 \multicolumn{2}{p{10.9cm}}{\textbf{ Hexapod Actuator Redesign Verification }} & Approved \\\hline
 \multicolumn{2}{r}{ T. Cycle \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCycle/LVV-C188}{LVV-C188}:} &
-\multicolumn{2}{p{10.9cm}}{\textbf{ Single Hexapod Actuator Redesign Verification }} & In Progress \\\hline
+\multicolumn{2}{p{10.9cm}}{\textbf{ Single Hexapod Actuator Redesign Verification }} & Not Executed \\\hline
 \textbf{Test Cases} &  \textbf{Ver.}  \\\toprule
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2805}{LVV-T2805}
-&  1
-\\
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2531}{LVV-T2531}
 &  1
 \\
@@ -627,7 +610,7 @@ Not yet available.
 Open test cycle {\it \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testrun/LVV-C188}{Single Hexapod Actuator Redesign Verification}} in Jira.
 
 Test Cycle name: Single Hexapod Actuator Redesign Verification\\
-Status: In Progress
+Status: Not Executed
 
 The objective of this test cycle is to verify the redesign of the
 actuator does not affect our ability to meet the hexapod requirements by
@@ -641,894 +624,6 @@ The hexapod actuator will require a load cell connected to two pneumatic
 valves supplying air in order to provide load onto the actuator.
 
 \subsubsection{Test Cases in LVV-C188 Test Cycle}
-
-\paragraph{ LVV-T2805 - Hexapod Initial Validation w/ Surrogate }\mbox{}\\
-
-Version \textbf{1}.
-Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2805}{\textit{ LVV-T2805 } }
-test case in Jira.
-
-The objective is to validate the corresponding psi values for the
-voltages of the hexapod actuator test rig. In addition to validating the
-amount of force applied for each voltage, this test will also validate
-the test rig can be safely commanded to 60kN in both compression and
-tension.
-
-\textbf{ Preconditions}:\\
-
-
-Final comment:\\
-
-
-Detailed steps :
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 1  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Run the Encoder A (D13B) and Load Cell.vi
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Test Data \\
- {\footnotesize
-\textbf{Note:~}This is the vi that has the capability of adjusting the
-voltages for the pneumatic valves.~
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-The voltages of the valves are able to be controlled through the vi.
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 2  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Run the Encoder A (D13B) and Load Cell.vi
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Test Data \\
- {\footnotesize
-\textbf{Note:~}This is the vi that has the capability of adjusting the
-voltages for the pneumatic valves.~
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-The voltages of the valves are able to be controlled through the vi.
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 3  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Set the voltage for the {tension}⁠ ~valve to 0.146V.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Test Data \\
- {\footnotesize
-\textbf{Note:~}Channel 0 controls the compression valve and Channel 1
-controls the tension valve.\\[2\baselineskip]\textbf{Note:~}This step
-can be used to initially determine the ramp rate of the applied force.
-If it is observed that the load is applied very quickly to the test rig,
-it will be necessary to apply load to the system in smaller increments.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-The load should read +/-1kN (or 224.8lbs)
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 4  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Set the voltage for the {compression}⁠ ~valve to 0.146V.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Test Data \\
- {\footnotesize
-\textbf{Note:~}Channel 0 controls the compression valve and Channel 1
-controls the tension valve.\\[2\baselineskip]\textbf{Note:~}This step
-can be used to initially determine the ramp rate of the applied force.
-If it is observed that the load is applied very quickly to the test rig,
-it will be necessary to apply load to the system in smaller increments.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-The load should read +/-1kN (or 224.8lbs)
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 5  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Set the voltage for the {tension}⁠ ~valve to 0.292V.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Test Data \\
- {\footnotesize
-\textbf{Note:~}This step can be used to initially determine the ramp
-rate of the applied force. If it is observed that the load is applied
-very quickly to the test rig, it will be necessary to apply load to the
-system in smaller increments.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-The load should read +/-2kN (or 449.6lbs)
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 6  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Set the voltage for the {compression}⁠ ~valve to 0.292V.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Test Data \\
- {\footnotesize
-\textbf{Note:~}This step can be used to initially determine the ramp
-rate of the applied force. If it is observed that the load is applied
-very quickly to the test rig, it will be necessary to apply load to the
-system in smaller increments.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-The load should read +/-2kN (or 449.6lbs)
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 7  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Set the voltage for the {tension}⁠ ~valve to 0.438V.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Test Data \\
- {\footnotesize
-\textbf{Note:~}This step can be used to initially determine the ramp
-rate of the applied force. If it is observed that the load is applied
-very quickly to the test rig, it will be necessary to apply load to the
-system in smaller increments.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-The load should read +/-3kN (or 674.4lbs)
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 8  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Set the voltage for the {compression}⁠ ~valve to 0.438V.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Test Data \\
- {\footnotesize
-\textbf{Note:~}This step can be used to initially determine the ramp
-rate of the applied force. If it is observed that the load is applied
-very quickly to the test rig, it will be necessary to apply load to the
-system in smaller increments.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-The load should read +/-3kN (or 674.4lbs)
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 9  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Set the voltage for the {tension}⁠ ~valve to 0.584V.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Test Data \\
- {\footnotesize
-\textbf{Note:~}This step can be used to initially determine the ramp
-rate of the applied force. If it is observed that the load is applied
-very quickly to the test rig, it will be necessary to apply load to the
-system in smaller increments.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-The load should read +/-4kN (or 899.2lbs)
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 10  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Set the voltage for the {compression}⁠ ~valve to 0.584V.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Test Data \\
- {\footnotesize
-\textbf{Note:~}This step can be used to initially determine the ramp
-rate of the applied force. If it is observed that the load is applied
-very quickly to the test rig, it will be necessary to apply load to the
-system in smaller increments.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-The load should read +/-4kN (or 899.2lbs)
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 11  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Set the voltage for the {tension}⁠ ~valve to 0.730V.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Test Data \\
- {\footnotesize
-\textbf{Note:~}Initially, we will apply the load in increments of +/-5kN
-so this step will be used to determine if that can be done safely. If it
-is observed that the rate that the load is applied is slow enough that
-it will not damage the test rig or the actuator, then we will increase
-the increments that we apply the load.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-The load should read +/-5kN (or 1124.1lbs)
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 12  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Set the voltage for the {compression}⁠ ~valve to 0.730V.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Test Data \\
- {\footnotesize
-\textbf{Note:~}Initially, we will apply the load in increments of +/-5kN
-so this step will be used to determine if that can be done safely. If it
-is observed that the rate that the load is applied is slow enough that
-it will not damage the test rig or the actuator, then we will increase
-the increments that we apply the load.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-The load should read +/-5kN (or 1124.1lbs)
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 13  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Set the voltage for the {tension}⁠ ~valve to 1.46V.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-The load should read +/-10kN (or 2248.1lbs)
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 14  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Set the voltage for the {compression}⁠ ~valve to 1.46V.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-The load should read +/-10kN (or 2248.1lbs)
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 15  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Set the voltage for the {tension}⁠ ~valve to 2.19V.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-The load should read +/-15kN (or 3372.2lbs)
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 16  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Set the voltage for the {compression}⁠ ~valve to 2.19V.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-The load should read +/-15kN (or 3372.2lbs)
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 17  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Set the voltage for the {tension}⁠ ~valve to 2.92V.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-The load should read +/-20kN (or 4496.2lbs)
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 18  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Set the voltage for the {compression}⁠ ~valve to 2.92V.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-The load should read +/-20kN (or 4496.2lbs)
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 19  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Set the voltage for the {tension}⁠ ~valve to 3.65V.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-The load should read +/-25kN (or 5620.2lbs)
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 20  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Set the voltage for the {compression}⁠ ~valve to 3.65V.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-The load should read +/-25kN (or 5620.2lbs)
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 21  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Set the voltage for the {tension}⁠ ~valve to 4.38V.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-The load should read +/-30kN (or 6744.3lbs)
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 22  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Set the voltage for the {compression}⁠ ~valve to 4.38V.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-The load should read +/-30kN (or 6744.3lbs)
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 23  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-If the ramp rate is determined to be too high to apply more than 5kN at
-a time, set the voltage for the {tension}⁠ ~valve to 5.11V.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-The load should read +/-35kN (or 7868.3lbs)
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 24  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-If the ramp rate is determined to be too high to apply more than 5kN at
-a time, set the voltage for the {compression}⁠ ~valve to 5.11V.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-The load should read +/-35kN (or 7868.3lbs)
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 25  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Set the voltage for the {tension}⁠ ~valve to 5.84V.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-The load should read +/-40kN (or 8992.4lbs)
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 26  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Set the voltage for the {compression}⁠ ~valve to 5.84V.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-The load should read +/-40kN (or 8992.4lbs)
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 27  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-If the ramp rate is determined to be too high to apply more than 5kN at
-a time, set the voltage for the {tension}⁠ ~valve to 6.57V.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-The load should read +/-45kN (or 10116.4lbs)
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 28  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-If the ramp rate is determined to be too high to apply more than 5kN at
-a time, set the voltage for the {compression}⁠ ~valve to 6.57V.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-The load should read +/-45kN (or 10116.4lbs)
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 29  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Set the voltage for the {tension}⁠ ~valve to 7.30V.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-The load should read +/-50kN (or 11240.5lbs)
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 30  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Set the voltage for the {compression}⁠ ~valve to 7.30V.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-The load should read +/-50kN (or 11240.5lbs)
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 31  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Set the voltage for the {tension}⁠ ~valve to 8.03V.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-The load should read +/-55kN (or 12364.5lbs)
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 32  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Set the voltage for the {compression}⁠ ~valve to 8.03V.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-The load should read +/-55kN (or 12364.5lbs)
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 33  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Set the voltage for the {tension}⁠ ~valve to 8.17V.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-The load should read +/-56kN (or 12589.3lbs)
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 34  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Set the voltage for the {compression}⁠ ~valve to 8.17V.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-The load should read +/-56kN (or 12589.3lbs)
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 35  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Set the voltage for the {tension}⁠ ~valve to 8.32V.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-The load should read +/-57kN (or 12814.2lbs)
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 36  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Set the voltage for the {compression}⁠ ~valve to 8.32V.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-The load should read +/-57kN (or 12814.2lbs)
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 37  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Set the voltage for the {tension}⁠ ~valve to 8.47V.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-The load should read +/-58kN (or 13038.9lbs)
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 38  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Set the voltage for the {compression}⁠ ~valve to 8.47V.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-The load should read +/-58kN (or 13038.9lbs)
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 39  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Set the voltage for the {{tension}⁠~} valve to 8.61V.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-The load should read +/-59kN (or 13263.8lbs)
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 40  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Set the voltage for the {{compression}⁠~} valve to 8.61V.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-The load should read +/-59kN (or 13263.8lbs)
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 41  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Set the voltage for the {tension}⁠ ~valve to 8.76V.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-The load should read +/-60kN (or 13488.6lbs)
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 42  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Set the voltage for the {compression}⁠ ~valve to 8.76V.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-The load should read +/-60kN (or 13488.6lbs)
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 43  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Visually inspect the test rig to ensure that there are no obvious signs
-of failure and check the screws have not been loosened during the test.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-No signs of damage.
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 44  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Visually inspect the test rig to ensure that there are no obvious signs
-of failure and check the screws have not been loosened during the test.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-No signs of damage.
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 45  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Starting from zero load, measure the Force vs Displacement up to +/-30kN
-of {tension}⁠ force.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Test Data \\
- {\footnotesize
-\textbf{Note:~}This will be used to determine the stiffness of the test
-rig. Use the results of the previous steps to determine the amount of
-load that can be applied to the system at a time.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-Data is taken for both force and displacement.
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 46  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Starting from zero load, measure the Force vs Displacement up to +/-30kN
-of {compression}⁠ force.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Test Data \\
- {\footnotesize
-\textbf{Note:~}This will be used to determine the stiffness of the test
-rig. Use the results of the previous steps to determine the amount of
-load that can be applied to the system at a time.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-Data is taken for both force and displacement.
-
-}
 
 \paragraph{ LVV-T2531 - Hexapod - Actuator Test Set up }\mbox{}\\
 
@@ -1554,14 +649,14 @@ Step 1  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Verify the front door of the testing bay is locked and proper signage is
-in place to warn personnel from entering.
+Verify the front door of the testing bay is locked to prevent personnel
+from entering.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
-A ``Test in Progress'' sign is placed on the front door.~
+Both doors are locked and can only be opened by someone with key access.
 
 }
 
@@ -1600,13 +695,6 @@ valves.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Test Data \\
- {\footnotesize
-\textbf{Note:~}The air gauge being used for the test has a 0-10V output
-which directly corresponds to 150psi.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
 \begin{itemize}
@@ -1615,7 +703,7 @@ which directly corresponds to 150psi.
   The air gauge is in position and capable of reading the psi value
   being supplied to the air valves.
 \item
-  The air gauge shows no air being supplied.
+  The air gauge should initially show no air being supplied.
 \end{itemize}
 
 }
@@ -1626,19 +714,8 @@ Step 4  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Verify there is an air gauge monitoring the output from the air valve
-for tension and another air gauge monitoring the output from the the air
-valve for compression.~
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Test Data \\
- {\footnotesize
-\textbf{Note:~}The pneumatic valve closest to the load cell will be the
-tension air valve while the valve closest to the air supply will be the
-compression air valve.\\
-Furthermore, the pneumatic valves have 0-10V input and directly
-correspond to 150psi.
+Verify the valves for tension and compression are capable of displaying
+commanded voltage.~
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -1984,6 +1061,44 @@ reference for the offset of future moves.
 
 }
 
+\begin{tabular}{p{2cm}}
+\toprule
+Step 23  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Using the Copley Software, drive the actuator to the positive limit
+switch and take note of the values measured by the Copley Software and
+the Encoder Readings.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The actuator is able to hit the positive limit switch and the values are
+recorded.
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 24  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Using the Copley Software, drive the actuator to the negative limit
+switch and take note of the values measured by the Copley Software and
+the Encoder Readings.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The actuator is able to hit the negative limit switch and the values are
+recorded.
+
+}
+
 \paragraph{ LVV-T2426 - Hexapod - Actuator Proofing Testing with 200\% load }\mbox{}\\
 
 Version \textbf{1}.
@@ -2031,14 +1146,21 @@ Step 2  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Open the Labview VI files from the project directory including sub VIs-
-Tovey Closed loop.vi, Voltage Regulation.vi and Biss Reader.vi
+Run the following VI's:
+
+\begin{itemize}
+\tightlist
+\item
+  Encoder A (D13B) and Load Cell.vi
+\item
+  Encoder B (D0BD).vi
+\end{itemize}
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
-Front panel of VI and sub VI files open without any error.
+Front panel of VI's open without any error.
 
 }
 
@@ -2055,8 +1177,8 @@ front panel.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
-LabView VI and ~associated sub Vi runs successfully. Initially all the
-graphs and input values will be blank.
+LabView VI and associated sub Vi runs successfully. The graphs should
+start to be populated with data once the run button is pressed.
 
 }
 
@@ -2068,14 +1190,6 @@ Step 4  \\ \hline
 {\footnotesize
 Position the actuator at its center of stroke position using the control
 box and copley software.~
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Test Data \\
- {\footnotesize
-\textbf{Note:~}The original zero position/center of stroke position was
-determined to be a linear encoder reading of 40mm. For the purpose of
-this test, the same center of stroke position will be used.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -2110,23 +1224,14 @@ Step 6  \\ \hline
  Description \\
 {\footnotesize
 Slowly apply an increasing tension force with the load actuator until a
-force of 60 kN (13,489 lbf) is reached through LabView voltage
-regulation VI.
+force of 60 kN (13,489 lbf) through the Encoder A (D13B) and Load
+Cell.vi
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Test Data \\
  {\footnotesize
-\textbf{Note:~}In order to apply a tension force of 60kN:
-
-\begin{itemize}
-\tightlist
-\item
-  Set pneumatic valve (closest to hexapod actuator side) to
-  \textasciitilde{}7V (0-10 Vdc) while the other valve remains at 0V.
-\item
-  increase air supply using LabVIEW function~
-\end{itemize}
+\textbf{Note:~}Set valve to 8.76V to apply a +/-60kN force.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -2169,7 +1274,7 @@ Displacement graphs on the Labview BISS Reader VI for 10 minutes.~
   Test Data \\
  {\footnotesize
 \textbf{Note:~}Maintain the force on the cell by keeping the same
-voltage in the LabView voltage regulation VI.\\[2\baselineskip]
+voltage in the LabView voltage regulation VI.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -2235,17 +1340,7 @@ regulator.~
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Test Data \\
  {\footnotesize
-\textbf{Note:~}In order to apply a compression force of 60kN:\\
-
-\begin{itemize}
-\tightlist
-\item
-  Set pneumatic valve (far from the hexapod actuator side) to
-  \textasciitilde{}7V (0-10 Vdc) while the other valve remains at 0V (
-  reverse from step 6).
-\item
-  increase air supply using LabVIEW function~
-\end{itemize}
+\textbf{Note:~}Set valve to 8.76V to apply a +/-60kN force.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -2439,14 +1534,27 @@ Step 3  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Open the Labview VI files from the project directory including sub VIs-
-Tovey Closed loop.vi, Voltage Regulation.vi and Biss Reader.vi
+Run the following VI's:
+
+\begin{itemize}
+\tightlist
+\item
+  Encoder A (D13B) and Load Cell.vi
+\item
+  Encoder B (D0BD).vi
+\end{itemize}
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Test Data \\
+ {\footnotesize
+\textbf{Note:~}Each vi is responsible for reading one encoder.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
-Front panel of VI and sub VI files open without any error.
+Front panel of VI's open without any error.
 
 }
 
@@ -2456,14 +1564,27 @@ Step 4  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Open the Labview VI files from the project directory including sub VIs-
-Tovey Closed loop.vi, Voltage Regulation.vi and Biss Reader.vi
+Run the following VI's:
+
+\begin{itemize}
+\tightlist
+\item
+  Encoder A (D13B) and Load Cell.vi
+\item
+  Encoder B (D0BD).vi
+\end{itemize}
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Test Data \\
+ {\footnotesize
+\textbf{Note:~}Each vi is responsible for reading one encoder.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
-Front panel of VI and sub VI files open without any error.
+Front panel of VI's open without any error.
 
 }
 
@@ -2473,15 +1594,15 @@ Step 5  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Click Run button on the on the block diagram toolbar of the Labview VI
-front panel.
+Click Run button on the block diagram toolbar of the Labview VI front
+panel.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
-LabView VI and ~associated sub Vi runs successfully. Initially all the
-graphs and input values will be blank.
+LabView VI and associated sub Vi runs successfully. The graphs should
+start to be populated with data once the run button is pressed.
 
 }
 
@@ -2491,15 +1612,15 @@ Step 6  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Click Run button on the on the block diagram toolbar of the Labview VI
-front panel.
+Click Run button on the block diagram toolbar of the Labview VI front
+panel.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
-LabView VI and ~associated sub Vi runs successfully. Initially all the
-graphs and input values will be blank.
+LabView VI and associated sub Vi runs successfully. The graphs should
+start to be populated with data once the run button is pressed.
 
 }
 
@@ -2509,15 +1630,23 @@ Step 7  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Record the starting position of the actuator motor's rotary encoder
-using the copley control software.\\[2\baselineskip]
+Record the starting position of the actuator using the external
+encoders.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Test Data \\
+ {\footnotesize
+\textbf{Note:~}The Copley software will display a value based on the
+reading from its internal encoder, which may be useful to take note of.
+However, the readings reported by the external encoders will validate
+the reading of the internal encoder.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
-Copley records and displays the starting position of the rotary
-encoder.~
+The actuator position is determined by the external encoders.
 
 }
 
@@ -2527,15 +1656,23 @@ Step 8  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Record the starting position of the actuator motor's rotary encoder
-using the copley control software.\\[2\baselineskip]
+Record the starting position of the actuator using the external
+encoders.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Test Data \\
+ {\footnotesize
+\textbf{Note:~}The Copley software will display a value based on the
+reading from its internal encoder, which may be useful to take note of.
+However, the readings reported by the external encoders will validate
+the reading of the internal encoder.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
-Copley records and displays the starting position of the rotary
-encoder.~
+The actuator position is determined by the external encoders.
 
 }
 
@@ -2579,30 +1716,20 @@ Step 11  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Slowly apply an increasing {Tension}⁠~ force with the load actuator
-until a force of 60 kN (13,489 lbf) is reached through LabView voltage
-regulation VI.
+Slowly apply an increasing {Tension}⁠ ~force of +/-37.5kN.~
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Test Data \\
  {\footnotesize
-\textbf{Note:~}In order to apply a {Tension}⁠ ~force of 60kN:
-
-\begin{itemize}
-\tightlist
-\item
-  Set the closest pneumatic valve ~to \textasciitilde{}7V (0-10 Vdc)
-  while the other valve remains at 0V ( Reverse for Compression).
-\item
-  increase air supply using LabVIEW function~
-\end{itemize}
+\textbf{Note:~}Set the {Tension}⁠ valve to 5.48V in order to apply
++/-37.5kN of force.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
-Load cell reader shows the applied 60 KN {Tension}⁠~ force.\\
+Load cell reader shows the applied +/-37.5kN {Tension}⁠~ force.\\
 LabView displays the voltage being applied.
 
 }
@@ -2613,30 +1740,20 @@ Step 12  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Slowly apply an increasing {Compression}⁠~ force with the load actuator
-until a force of 60 kN (13,489 lbf) is reached through LabView voltage
-regulation VI.
+Slowly apply an increasing {Compression}⁠ ~force of +/-37.5kN.~
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Test Data \\
  {\footnotesize
-\textbf{Note:~}In order to apply a {Compression}⁠ ~force of 60kN:
-
-\begin{itemize}
-\tightlist
-\item
-  Set the closest pneumatic valve ~to \textasciitilde{}7V (0-10 Vdc)
-  while the other valve remains at 0V ( Reverse for Compression).
-\item
-  increase air supply using LabVIEW function~
-\end{itemize}
+\textbf{Note:~}Set the {Compression}⁠ valve to 5.48V in order to apply
++/-37.5kN of force.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
-Load cell reader shows the applied 60 KN {Compression}⁠~ force.\\
+Load cell reader shows the applied +/-37.5kN {Compression}⁠~ force.\\
 LabView displays the voltage being applied.
 
 }
@@ -2647,17 +1764,25 @@ Step 13  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Record the final position of the actuator motor's rotary encoder using
-the copley control software.\\[3\baselineskip]
+Record the displacement of the actuator using the external encoder
+readings.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Test Data \\
+ {\footnotesize
+\textbf{Note:~}The Copley software will display a value based on the
+reading from its internal encoder, which may be useful to take note of.
+However, the readings reported by the external encoders will validate
+the reading of the internal encoder.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
-Copley records and displays the final position of the rotary encoder.\\
-If the motor encoder position has changed significantly
-(\textgreater{}10 counts or 0.36 deg of motor rotation), the actuator
-has back-driven.
+The final position of the actuator has been determined.\\
+If the actuator position has changed significantly (\textgreater{}10
+counts or 0.36 deg of motor rotation), the actuator has back-driven.
 
 }
 
@@ -2667,17 +1792,25 @@ Step 14  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Record the final position of the actuator motor's rotary encoder using
-the copley control software.\\[3\baselineskip]
+Record the displacement of the actuator using the external encoder
+readings.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Test Data \\
+ {\footnotesize
+\textbf{Note:~}The Copley software will display a value based on the
+reading from its internal encoder, which may be useful to take note of.
+However, the readings reported by the external encoders will validate
+the reading of the internal encoder.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
-Copley records and displays the final position of the rotary encoder.\\
-If the motor encoder position has changed significantly
-(\textgreater{}10 counts or 0.36 deg of motor rotation), the actuator
-has back-driven.
+The final position of the actuator has been determined.\\
+If the actuator position has changed significantly (\textgreater{}10
+counts or 0.36 deg of motor rotation), the actuator has back-driven.
 
 }
 
@@ -2723,14 +1856,14 @@ Step 17  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Gradually reduce the {Tension}⁠~ force to obtain zero load.
+Reduce the {Tension}⁠ ~force to back to zero load.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Test Data \\
  {\footnotesize
 \textbf{Note:~}In order to reset the load to zero, both the valves
-should be set to 0 V.
+should be set to 0V.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -2747,14 +1880,14 @@ Step 18  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Gradually reduce the {Compression}⁠~ force to obtain zero load.
+Reduce the {Compression}⁠ ~force to back to zero load.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Test Data \\
  {\footnotesize
 \textbf{Note:~}In order to reset the load to zero, both the valves
-should be set to 0 V.
+should be set to 0V.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -2771,17 +1904,25 @@ Step 19  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Record the current position of the actuator motor's rotary encoder using
-the copley control software.
+Record the displacement of the actuator using the external encoder
+readings.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Test Data \\
+ {\footnotesize
+\textbf{Note:~}The Copley software will display a value based on the
+reading from its internal encoder, which may be useful to take note of.
+However, the readings reported by the external encoders will validate
+the reading of the internal encoder.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
-Copley records and displays the final position of the rotary encoder.\\
-If the motor encoder position has changed significantly
-(\textgreater{}10 counts or 0.36 deg of motor rotation), the actuator
-has back-driven.
+The final position of the actuator has been determined.\\
+If the actuator position has changed significantly (\textgreater{}10
+counts or 0.36 deg of motor rotation), the actuator has back-driven.
 
 }
 
@@ -2791,17 +1932,25 @@ Step 20  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Record the current position of the actuator motor's rotary encoder using
-the copley control software.
+Record the displacement of the actuator using the external encoder
+readings.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Test Data \\
+ {\footnotesize
+\textbf{Note:~}The Copley software will display a value based on the
+reading from its internal encoder, which may be useful to take note of.
+However, the readings reported by the external encoders will validate
+the reading of the internal encoder.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
-Copley records and displays the final position of the rotary encoder.\\
-If the motor encoder position has changed significantly
-(\textgreater{}10 counts or 0.36 deg of motor rotation), the actuator
-has back-driven.
+The final position of the actuator has been determined.\\
+If the actuator position has changed significantly (\textgreater{}10
+counts or 0.36 deg of motor rotation), the actuator has back-driven.
 
 }
 
@@ -2811,32 +1960,20 @@ Step 21  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-If the actuator has back-driven for 60 kN (2x the max load) tension
-force, slowly apply a {Tension}⁠~ force of 37.5 kN (1.25x the max load)
-with the the load actuator.\\
-Otherwise, \textbf{go to step 15}.~\\[2\baselineskip]
+Check if all the test results are recorded in excel spreadsheets.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Test Data \\
  {\footnotesize
-\textbf{Note:~}In order to apply a {Tension}⁠ ~force of 37.5 kN:
 
-\begin{itemize}
-\tightlist
-\item
-  Set the closest pneumatic valve ~to \textasciitilde{}4.4V (0-10 Vdc)
-  while the other valve remains at 0V ( Reverse for Compression).
-\item
-  increase air supply using LabVIEW function~
-\end{itemize}
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
-Skipped / Load cell reader shows the applied 37.5 KN {{Tension}⁠~}force
-and LabView displays the voltage being applied.
+Test Results are recorded in the excel spreadsheets residing in the
+LabView Folder directory.
 
 }
 
@@ -2846,196 +1983,26 @@ Step 22  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-If the actuator has back-driven for 60 kN (2x the max load) tension
-force, slowly apply a {Compression}⁠~ force of 37.5 kN (1.25x the max
-load) with the the load actuator.\\
-Otherwise, \textbf{go to step 15}.~\\[2\baselineskip]
+Check if all the test results are recorded in excel spreadsheets.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Test Data \\
  {\footnotesize
-\textbf{Note:~}In order to apply a {Compression}⁠ ~force of 37.5 kN:
 
-\begin{itemize}
-\tightlist
-\item
-  Set the closest pneumatic valve ~to \textasciitilde{}4.4V (0-10 Vdc)
-  while the other valve remains at 0V ( Reverse for Compression).
-\item
-  increase air supply using LabVIEW function~
-\end{itemize}
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
-Skipped / Load cell reader shows the applied 37.5 KN
-{{Compression}⁠~}force and LabView displays the voltage being applied.
+Test Results are recorded in the excel spreadsheets residing in the
+LabView Folder directory.
 
 }
 
 \begin{tabular}{p{2cm}}
 \toprule
 Step 23  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Record the final position of the actuator motor's rotary encoder using
-the copley control software.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-Copley records and displays the final position of the rotary encoder.\\
-If the motor encoder position has changed significantly
-(\textgreater{}10 counts or 0.36 deg of motor rotation), the actuator
-has back-driven.~~\\[2\baselineskip]
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 24  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Record the final position of the actuator motor's rotary encoder using
-the copley control software.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-Copley records and displays the final position of the rotary encoder.\\
-If the motor encoder position has changed significantly
-(\textgreater{}10 counts or 0.36 deg of motor rotation), the actuator
-has back-driven.~~\\[2\baselineskip]
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 25  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Confirm that there are no other signs of gross actuator motion.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-No visual movement, significant motion of the internal linear encoder or
-external linear test encoders beyond expected actuator compliance
-recorded in the LabView displacement graphs.
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 26  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Confirm that there are no other signs of gross actuator motion.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-No visual movement, significant motion of the internal linear encoder or
-external linear test encoders beyond expected actuator compliance
-recorded in the LabView displacement graphs.
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 27  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Gradually reduce the {Tension}⁠~ force to obtain zero load.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Test Data \\
- {\footnotesize
-\textbf{Note:~}In order to reset the load to zero, both the valves
-should be set to 0 V.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-{Tension}⁠ force fully removed. Load cell reader and Load graph in the
-LabView showing zero load.\\[2\baselineskip]
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 28  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Gradually reduce the {Compression}⁠~ force to obtain zero load.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Test Data \\
- {\footnotesize
-\textbf{Note:~}In order to reset the load to zero, both the valves
-should be set to 0 V.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-{Compression}⁠ force fully removed. Load cell reader and Load graph in
-the LabView showing zero load.\\[2\baselineskip]
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 29  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Check if all the test results are recorded in excel spreadsheets.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-Test Results are recorded in the excel spreadsheets residing in the
-LabView Folder directory.
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 30  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Check if all the test results are recorded in excel spreadsheets.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-Test Results are recorded in the excel spreadsheets residing in the
-LabView Folder directory.
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 31  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -3059,7 +2026,7 @@ All the VI files are closed and Labview 2021 application window closes.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 32  \\ \hline
+Step 24  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -3151,14 +2118,21 @@ Step 3  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Open the Labview VI files from the project directory including sub VIs-
-Tovey Closed loop.vi, Voltage Regulation.vi and Biss Reader.vi
+Open Labview 2021 in the computer used for Test Setup.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Test Data \\
+ {\footnotesize
+\textbf{Note:~}The first three steps are conditional because these steps
+are included as part of the Test Setup procedure and may not be
+necessary if LabView is still open.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
-Front panel of VI and sub VI files open without any error.
+Labview 2021 opens successfully.
 
 }
 
@@ -3168,14 +2142,21 @@ Step 4  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Open the Labview VI files from the project directory including sub VIs-
-Tovey Closed loop.vi, Voltage Regulation.vi and Biss Reader.vi
+Run the following VI's:
+
+\begin{itemize}
+\tightlist
+\item
+  Encoder A (D13B) and Load Cell.vi
+\item
+  Encoder B (D0BD).vi
+\end{itemize}
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
-Front panel of VI and sub VI files open without any error.
+Front panel of VI's open without any error.
 
 }
 
@@ -3185,15 +2166,21 @@ Step 5  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Click Run button on the on the block diagram toolbar of the Labview VI
-front panel.
+Run the following VI's:
+
+\begin{itemize}
+\tightlist
+\item
+  Encoder A (D13B) and Load Cell.vi
+\item
+  Encoder B (D0BD).vi
+\end{itemize}
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
-LabView VI and ~associated sub Vi runs successfully. Initially all the
-graphs and input values will be blank.
+Front panel of VI's open without any error.
 
 }
 
@@ -3203,15 +2190,21 @@ Step 6  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Click Run button on the on the block diagram toolbar of the Labview VI
-front panel.
+Run the following VI's:
+
+\begin{itemize}
+\tightlist
+\item
+  Encoder A (D13B) and Load Cell.vi
+\item
+  Encoder B (D0BD).vi
+\end{itemize}
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
-LabView VI and ~associated sub Vi runs successfully. Initially all the
-graphs and input values will be blank.
+Front panel of VI's open without any error.
 
 }
 
@@ -3221,22 +2214,15 @@ Step 7  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Position the actuator at its center of stroke.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Test Data \\
- {\footnotesize
-\textbf{Note:~}The original zero position/center of stroke position was
-determined to be a linear encoder reading of 40mm. For the purpose of
-this test, the same center of stroke position will be used.
+Click Run button on the block diagram toolbar of the Labview VI front
+panel.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
-Actuator positioned at its center of stroke position ~confirmed by
-encoder reading in the LabView.\\[2\baselineskip]
+LabView VI and associated sub Vi runs successfully. The graphs should
+start to be populated with data once the run button is pressed.~
 
 }
 
@@ -3246,22 +2232,15 @@ Step 8  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Position the actuator at its center of stroke.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Test Data \\
- {\footnotesize
-\textbf{Note:~}The original zero position/center of stroke position was
-determined to be a linear encoder reading of 40mm. For the purpose of
-this test, the same center of stroke position will be used.
+Click Run button on the block diagram toolbar of the Labview VI front
+panel.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
-Actuator positioned at its center of stroke position ~confirmed by
-encoder reading in the LabView.\\[2\baselineskip]
+LabView VI and associated sub Vi runs successfully. The graphs should
+start to be populated with data once the run button is pressed.~
 
 }
 
@@ -3271,14 +2250,15 @@ Step 9  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Disable Motor Power by pressing the Emergency stop button on the control
-box.
+Click Run button on the block diagram toolbar of the Labview VI front
+panel.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
-Motor power disabled.
+LabView VI and associated sub Vi runs successfully. The graphs should
+start to be populated with data once the run button is pressed.~
 
 }
 
@@ -3288,6 +2268,96 @@ Step 10  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
+Note the starting position read by the encoders, while fully {centered}⁠
+.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Test Data \\
+ {\footnotesize
+\textbf{Note}:\\
+Centered = Actuator is at the zero position (Active Load Position =
+-40.202mm)\\
+Extended = Actuator is at its positive limit switch (Active Load
+Position = -25.904mm)\\
+Retracted = Actuator is at its negative limit switch (Active Load
+Position = -54.501mm)
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+Actuator position confirmed by encoder reading in the
+LabView.\\[2\baselineskip]
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 11  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Note the starting position read by the encoders, while fully {extended}⁠
+.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Test Data \\
+ {\footnotesize
+\textbf{Note}:\\
+Centered = Actuator is at the zero position (Active Load Position =
+-40.202mm)\\
+Extended = Actuator is at its positive limit switch (Active Load
+Position = -25.904mm)\\
+Retracted = Actuator is at its negative limit switch (Active Load
+Position = -54.501mm)
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+Actuator position confirmed by encoder reading in the
+LabView.\\[2\baselineskip]
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 12  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Note the starting position read by the encoders, while fully
+{retracted}⁠ .
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Test Data \\
+ {\footnotesize
+\textbf{Note}:\\
+Centered = Actuator is at the zero position (Active Load Position =
+-40.202mm)\\
+Extended = Actuator is at its positive limit switch (Active Load
+Position = -25.904mm)\\
+Retracted = Actuator is at its negative limit switch (Active Load
+Position = -54.501mm)
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+Actuator position confirmed by encoder reading in the
+LabView.\\[2\baselineskip]
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 13  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
 Disable Motor Power by pressing the Emergency stop button on the control
 box.
 
@@ -3301,133 +2371,18 @@ Motor power disabled.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 11  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Iteration {1}⁠ : Increase the load on the actuator from 0 kN to
-approximately 30kN (6744 lbf) tension
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Test Data \\
- {\footnotesize
-\textbf{Note:~}In order to apply a tension force of 30 KN:
-
-\begin{itemize}
-\tightlist
-\item
-  Set pneumatic valve (closest to hexapod actuator side) to 3.5V (0-10
-  Vdc) while the other valve remains at 0V.
-\item
-  increase air supply using LabVIEW function~
-\end{itemize}
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-Load cell reader shows the applied 30 KN tension force.\\
-LabView displays the voltage being applied.
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 12  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Iteration {2}⁠ : Increase the load on the actuator from 0 kN to
-approximately 30kN (6744 lbf) tension
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Test Data \\
- {\footnotesize
-\textbf{Note:~}In order to apply a tension force of 30 KN:
-
-\begin{itemize}
-\tightlist
-\item
-  Set pneumatic valve (closest to hexapod actuator side) to 3.5V (0-10
-  Vdc) while the other valve remains at 0V.
-\item
-  increase air supply using LabVIEW function~
-\end{itemize}
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-Load cell reader shows the applied 30 KN tension force.\\
-LabView displays the voltage being applied.
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 13  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Iteration {{1}⁠} :Reduce the load through zero load to approximately 30
-kN (6744 lbf) compression, and return to zero load.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Test Data \\
- {\footnotesize
-\textbf{Note:~}In order to apply a compression force of 30kN:\\
-
-\begin{itemize}
-\tightlist
-\item
-  Set pneumatic valve (far from the hexapod actuator side) to 3.5V (0-10
-  Vdc) while the other valve remains at 0V ( reverse from step 6).
-\item
-  increase air supply using LabVIEW function~
-\end{itemize}
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-Load graphs shows the fluctuation of loads from 30 KN tension to zero to
-30 KN compression and back to zero load in LabView.~
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
 Step 14  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Iteration {{2}⁠} :Reduce the load through zero load to approximately 30
-kN (6744 lbf) compression, and return to zero load.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Test Data \\
- {\footnotesize
-\textbf{Note:~}In order to apply a compression force of 30kN:\\
-
-\begin{itemize}
-\tightlist
-\item
-  Set pneumatic valve (far from the hexapod actuator side) to 3.5V (0-10
-  Vdc) while the other valve remains at 0V ( reverse from step 6).
-\item
-  increase air supply using LabVIEW function~
-\end{itemize}
+Disable Motor Power by pressing the Emergency stop button on the control
+box.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
-Load graphs shows the fluctuation of loads from 30 KN tension to zero to
-30 KN compression and back to zero load in LabView.~
+Motor power disabled.
 
 }
 
@@ -3437,15 +2392,14 @@ Step 15  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Record the actual displacement as measured by the two external encoders
-as LabView graph ( Time vs Displacement).\\[2\baselineskip]
+Disable Motor Power by pressing the Emergency stop button on the control
+box.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
-Actual displacement measured by the average of the two external encoders
-~recorded in the LabView graph.
+Motor power disabled.
 
 }
 
@@ -3455,8 +2409,152 @@ Step 16  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
+While fully {centered}⁠: Increase the load on the actuator from 0 kN to
+approximately +30kN.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Test Data \\
+ {\footnotesize
+\textbf{Note:~}To apply +30kN, set Channel 1 = 4.38V and Channel 0 = 0V.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+Load cell reader shows the applied +30 kN tension force.\\
+LabView displays the voltage being applied.
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 17  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+While fully {extended}⁠: Increase the load on the actuator from 0 kN to
+approximately +30kN.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Test Data \\
+ {\footnotesize
+\textbf{Note:~}To apply +30kN, set Channel 1 = 4.38V and Channel 0 = 0V.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+Load cell reader shows the applied +30 kN tension force.\\
+LabView displays the voltage being applied.
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 18  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+While fully {retracted}⁠: Increase the load on the actuator from 0 kN to
+approximately +30kN.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Test Data \\
+ {\footnotesize
+\textbf{Note:~}To apply +30kN, set Channel 1 = 4.38V and Channel 0 = 0V.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+Load cell reader shows the applied +30 kN tension force.\\
+LabView displays the voltage being applied.
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 19  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+While fully {{centered}⁠}: Reduce the load to back to 0kN and then to
+-30 kN.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Test Data \\
+ {\footnotesize
+\textbf{Note:~}To apply -30kN, set Channel 1 = 4.38V and Channel 0 = 0V.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+Load cell reader shows the applied 0kN force and the -30kN compression
+force.
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 20  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+While fully {{extended}⁠}: Reduce the load to back to 0kN and then to
+-30 kN.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Test Data \\
+ {\footnotesize
+\textbf{Note:~}To apply -30kN, set Channel 1 = 4.38V and Channel 0 = 0V.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+Load cell reader shows the applied 0kN force and the -30kN compression
+force.
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 21  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+While fully {{retracted}⁠}: Reduce the load to back to 0kN and then to
+-30 kN.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Test Data \\
+ {\footnotesize
+\textbf{Note:~}To apply -30kN, set Channel 1 = 4.38V and Channel 0 = 0V.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+Load cell reader shows the applied 0kN force and the -30kN compression
+force.
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 22  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
 Record the actual displacement as measured by the two external encoders
-as LabView graph ( Time vs Displacement).\\[2\baselineskip]
+as LabView graph (Displacement vs Time).\\[2\baselineskip]
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -3469,11 +2567,47 @@ Actual displacement measured by the average of the two external encoders
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 17  \\ \hline
+Step 23  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-View the ~force vs displacement plot in the Labview.\\[2\baselineskip]
+Record the actual displacement as measured by the two external encoders
+as LabView graph (Displacement vs Time).\\[2\baselineskip]
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+Actual displacement measured by the average of the two external encoders
+~recorded in the LabView graph.
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 24  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Record the actual displacement as measured by the two external encoders
+as LabView graph (Displacement vs Time).\\[2\baselineskip]
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+Actual displacement measured by the average of the two external encoders
+~recorded in the LabView graph.
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 25  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+View the force vs displacement plot in the Labview.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -3486,11 +2620,11 @@ stroke.~\\[2\baselineskip]
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 18  \\ \hline
+Step 26  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-View the ~force vs displacement plot in the Labview.\\[2\baselineskip]
+View the force vs displacement plot in the Labview.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -3503,7 +2637,24 @@ stroke.~\\[2\baselineskip]
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 19  \\ \hline
+Step 27  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+View the force vs displacement plot in the Labview.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The expected actuator stiffness is \textgreater{}= 134 N/um at center
+stroke.~\\[2\baselineskip]
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 28  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -3520,7 +2671,7 @@ LabView Folder directory.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 20  \\ \hline
+Step 29  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -3537,7 +2688,24 @@ LabView Folder directory.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 21  \\ \hline
+Step 30  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Check if all the test results are recorded in excel spreadsheets.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+Test Results are recorded in the excel spreadsheets residing in the
+LabView Folder directory.
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 31  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -3561,7 +2729,31 @@ All the VI files are closed and Labview 2021 application window closes.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 22  \\ \hline
+Step 32  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Close all the Labview VI files.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Test Data \\
+ {\footnotesize
+\textbf{Note:~}Labview can be left open in order to continue to the next
+test. However, it may be necessary to reset the application before
+starting the next test.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+All the VI files are closed and Labview 2021 application window closes.
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 33  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -3632,14 +2824,21 @@ Step 2  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Open the Labview VI files from the project directory including sub VIs-
-Tovey Closed loop.vi, Voltage Regulation.vi and Biss Reader.vi
+Run the following VI's:
+
+\begin{itemize}
+\tightlist
+\item
+  Encoder A (D13B) and Load Cell.vi
+\item
+  Encoder B (D0BD).vi
+\end{itemize}
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
-Front panel of VI and sub VI files open without any error.
+Front panel of VI's open without any error.
 
 }
 
@@ -3656,8 +2855,8 @@ front panel.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
-LabView VI and ~associated sub Vi runs successfully. Initially all the
-graphs and input values will be blank.
+LabView VI and associated sub Vi runs successfully. The graphs should
+start to be populated with data once the run button is pressed.
 
 }
 
@@ -3667,26 +2866,20 @@ Step 4  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Apply a 15kN compression load by using the LabView function to increase
-the air supply value of \textasciitilde{}1.75V to one of the pneumatic
-valve.
+Apply a -15kN compression load by using the LabView function to increase
+the air supply value of 2.19V to the compression valve.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Test Data \\
  {\footnotesize
-\begin{itemize}
-\tightlist
-\item
-  Tension Load - Tension air Valve ( nearest one) will be set to 1.75V
-  and other valve will be set to 0V. \textbf{~}{~~}
-\end{itemize}
+
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
-The LabView load graph( Time vs Load) shows 15 KN compression load
+The LabView load graph( Time vs Load) shows -15 KN compression load
 applied.
 
 }
@@ -3699,13 +2892,6 @@ Step 5  \\ \hline
 {\footnotesize
 Within the copley software, set the maximum actuator velocity to +/-0.5
 mm/s.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Test Data \\
- {\footnotesize
-\textbf{Note:~}This should be done by through the use of the command box
-(pending instructions from Oli)
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -3726,13 +2912,6 @@ deceleration limits to 0.5mm/s\^{}2.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Test Data \\
- {\footnotesize
-\textbf{Note:~}This should be done by through the use of the command box
-(pending instructions from Oli)
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
 The maximum acceleration is set to 0.5mm/s\^{}2.
@@ -3745,7 +2924,7 @@ Step 7  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Using the copley software, command the actuator to move 5mm.
+Using the copley software, command the actuator to move relatively +5mm.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -3780,8 +2959,8 @@ Step 9  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Using the copley software, command the actuator to move 5mm in the
-opposite direction, returning the original position.
+Using the copley software, command the actuator to move -5mm
+(relatively), returning the original position.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -3805,25 +2984,14 @@ Step 10  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Now apply a 15kN tension load by using the LabView function to increase
-the air supply value of \textasciitilde{}1.75V to other pneumatic valve.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Test Data \\
- {\footnotesize
-\begin{itemize}
-\tightlist
-\item
-  Compression Load - Compression air Valve ( Farthest one) will be set
-  to 1.75V and other valve will be set to 0V.
-\end{itemize}
+Now apply a +15kN tension load by using the LabView function to increase
+the air supply value of 2.19V to the tension valve.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
-The LabView load graph( Time vs Load) shows 15 KN tension load has been
+The LabView load graph( Time vs Load) shows +15 KN tension load has been
 applied.
 
 }
@@ -3834,7 +3002,7 @@ Step 11  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Using the copley software, command the actuator to move 5mm.
+Using the copley software, command the actuator to move relatively +5mm.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -3851,8 +3019,8 @@ Step 12  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Using the copley software, command the actuator to move 5mm in the
-opposite direction, returning the original position.
+Using the copley software, command the actuator to move -5mm
+(relatively), returning the original position.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -3977,13 +3145,21 @@ Step 2  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Open the Labview Biss Reader.vi file.~
+Run the following VI's:
+
+\begin{itemize}
+\tightlist
+\item
+  Encoder A (D13B) and Load Cell.vi
+\item
+  Encoder B (D0BD).vi
+\end{itemize}
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
-Front panel of the VI a file open without any error.
+Front panel of the VI's open without any error.
 
 }
 
@@ -3993,15 +3169,15 @@ Step 3  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Click Run button on the on the block diagram toolbar of the Labview VI
-front panel.
+Click Run button on the block diagram toolbar of the Labview VI front
+panel.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
-Biss Reader.vi run successfully. Initially all the graphs and input
-values will be blank.
+LabView VI and associated sub Vi runs successfully. The graphs should
+start to be populated with data once the run button is pressed.
 
 }
 
@@ -4205,7 +3381,7 @@ Record the final position of the limit switch.~\\[2\baselineskip]
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
-\textbf{Final position of the limit switch around +14.50mm.}
+Final position of the limit switch is around +14.50mm.
 
 }
 
@@ -4371,7 +3547,7 @@ Record the final position of the limit switch.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
-\textbf{Final position of the limit switch around -14.50mm.}
+Final position of the limit switch is around -14.50mm.
 
 }
 
@@ -4484,14 +3660,21 @@ Step 2  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Open the Labview VI files from the project directory including sub VIs-
-Tovey Closed loop.vi, Voltage Regulation.vi and Biss Reader.vi
+Run the following VI's:
+
+\begin{itemize}
+\tightlist
+\item
+  Encoder A (D13B) and Load Cell.vi
+\item
+  Encoder B (D0BD).vi
+\end{itemize}
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
-Front panel of VI and sub VI files open without any error.
+Front panel of VI's open without any error.
 
 }
 
@@ -4501,15 +3684,15 @@ Step 3  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Click Run button on the on the block diagram toolbar of the Labview VI
-front panel.~
+Click Run button on the block diagram toolbar of the Labview VI front
+panel.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
-LabView VI and ~associated sub Vi runs successfully. Initially all the
-graphs and input values will be blank.
+LabView VI and associated sub Vi runs successfully. The graphs should
+start to be populated with data once the run button is pressed.
 
 }
 
@@ -4519,29 +3702,20 @@ Step 4  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Apply a \textbf{tension} force with the load actuator until a force of
-15 KN is reached through LabView voltage regulation.vi file.
+Apply a force of +15kN.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Test Data \\
  {\footnotesize
-\textbf{Note:~}In order to apply a tension force of 15 KN:
-
-\begin{itemize}
-\tightlist
-\item
-  Set pneumatic valve (closest to hexapod actuator side) to 1.75V (0-10
-  Vdc) while the other valve remains at 0V.
-\item
-  increase air supply using LabVIEW function~
-\end{itemize}
+\textbf{Note:~}In order to apply a tension force of +15 kN, set Channel
+1 = 2.19V and Channel 0 = 0V.~
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
-Load cell reader shows the applied 15 KN \textbf{tension} force.\\
+Load cell reader shows the applied +15 KN \textbf{tension} force.\\
 LabView displays the voltage being applied.
 
 }
@@ -4552,14 +3726,14 @@ Step 5  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Record the load cell value in the LabView in the form of Time vs Load
-graph using the Tovey Closed loop.vi file.~
+Record the load cell value in the LabView in the form of Load vs Time
+graph.~
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
-LabView load graph( Time vs Load) shows 15 KN tension force.~~
+LabView load graph (Load vs Time) shows +15 kN tension force applied.~
 
 }
 
@@ -4589,7 +3763,7 @@ Step 7  \\ \hline
  Description \\
 {\footnotesize
 Record the actual displacement as measured by the two external encoders
-as LabView graph ( Time vs Displacement).
+as LabView graph (Displacement vs Time).
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -4642,19 +3816,13 @@ Step 10  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Remove the 15 kN tension load from the actuator using the LabView
-voltage regulation.vi file.~
+Remove the 15 kN tension load.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Test Data \\
  {\footnotesize
-\begin{itemize}
-\tightlist
-\item
-  Pneumatic valve (closest to hexapod actuator side) to 0V (0-10 Vdc)
-  while the other valve remains at 0V.
-\end{itemize}
+\textbf{Note:~}Set Channel 0 = Channel 1 = 0V.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -4678,10 +3846,8 @@ two external linear encoder measurements.~
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
-Comparison of the Displacement graphs ( External vs internal) in
-LabView. The magnitude should not vary by more than 50\% from the
-commanded value based on an average of the two external linear encoder
-measurements.\\[2\baselineskip]
+The magnitude should not vary by more than 50\% from the commanded value
+based on an average of the two external linear encoder measurements.
 
 }
 
@@ -4691,29 +3857,20 @@ Step 12  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Apply a \textbf{compression} force with the load actuator until a force
-of 15 KN is reached through LabView voltage regulation.vi file.
+Apply a -15kN force.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Test Data \\
  {\footnotesize
-\textbf{Note:~}In order to apply a compression force of 15 kN:\\
-
-\begin{itemize}
-\tightlist
-\item
-  Set pneumatic valve (far from the hexapod actuator side) to 1.75V
-  (0-10 Vdc) while the other valve remains at 0V ( reverse from step 5).
-\item
-  increase air supply using LabVIEW function~
-\end{itemize}
+\textbf{Note:~}In order to apply a compression force of -15 kN, set
+Channel 0 = 2.19V and Channel 1 = 0V.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
-Load cell reader shows the applied 15 KN \textbf{compression} force.\\
+Load cell reader shows the applied -15 KN \textbf{compression} force.\\
 LabView displays the voltage being applied.
 
 }
@@ -4744,7 +3901,7 @@ Step 14  \\ \hline
  Description \\
 {\footnotesize
 Record the actual displacement as measured by average of ~the two
-external encoder as Labview graph ( Time vs Displacement).
+external encoder as Labview graph (Displacement vs. Time).
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -4779,19 +3936,13 @@ Step 16  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Remove the 15 kN compression load from the actuator using the LabView
-voltage regulation.vi file.
+Remove the 15 kN compression load.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Test Data \\
  {\footnotesize
-\begin{itemize}
-\tightlist
-\item
-  Pneumatic valve (closest to hexapod actuator side) to 0V (0-10 Vdc)
-  while the other valve remains at 0V.
-\end{itemize}
+\textbf{Note:~}Set Channel 0 = Channel 1 = 0V.\\[2\baselineskip]
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -4890,10 +4041,8 @@ two external linear encoder measurements.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
-Comparison of the Displacement graphs ( External vs internal) in
-LabView. The magnitude should not vary by more than 50\% from the
-commanded value based on an average of the two external linear encoder
-measurements.\\[2\baselineskip]
+The magnitude should not vary by more than 50\% from the commanded value
+based on an average of the two external linear encoder measurements.
 
 }
 
@@ -4978,15 +4127,32 @@ Step 1  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
+Review the Specification of the Resolute Encoder Series RL 36B ES 001 C
+10 F encoder to confirm the accuracy of the encoder.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+Accuracy should be less than 12um.
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 2  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
 Open Labview 2021 in the computer used for Test Setup.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Test Data \\
  {\footnotesize
-The first three steps are conditional because these steps are included
-as part of the Test Setup procedure and may not be necessary if LabView
-is still open.
+The next three steps are conditional because these steps are included as
+part of the Test Setup procedure and may not be necessary if LabView is
+still open.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -4998,24 +4164,31 @@ Labview 2021 opens successfully.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 2  \\ \hline
+Step 3  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Open the Labview VI files from the project directory including sub VIs-
-Tovey Closed loop.vi, Voltage Regulation.vi and Biss Reader.vi
+Run the following VI's:
+
+\begin{itemize}
+\tightlist
+\item
+  Encoder A (D13B) and Load Cell.vi
+\item
+  Encoder B (D0BD).vi
+\end{itemize}
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
-Front panel of VI and sub VI files open without any error.
+Front panel of VI's open without any error.
 
 }
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 3  \\ \hline
+Step 4  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -5026,14 +4199,14 @@ front panel.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
-LabView VI and ~associated sub Vi runs successfully. Initially all the
-graphs and input values will be blank.
+LabView VI and associated sub Vi runs successfully. The graphs should
+start to be populated with data once the run button is pressed.
 
 }
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 4  \\ \hline
+Step 5  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -5059,57 +4232,48 @@ encoder reading in the LabView.\\[2\baselineskip]
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 5  \\ \hline
+Step 6  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Apply a \textbf{tension} force with the load actuator until a force of
-15 KN is reached through LabView voltage regulation.vi file.
+Apply a force of +15kN.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Test Data \\
  {\footnotesize
-\textbf{Note:~}In order to apply a tension force of 15 KN:
-
-\begin{itemize}
-\tightlist
-\item
-  Set pneumatic valve (closest to hexapod actuator side) to \emph{x}V
-  (0-10 Vdc) while the other valve remains at 0V.
-\item
-  increase air supply using LabVIEW function~
-\end{itemize}
+\textbf{Note:~}In order to apply a tension force of +15 kN, set Channel
+1 = 2.19V and Channel 0 = 0V.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
-Load cell reader shows the applied 15 KN \textbf{tension} force.\\
+Load cell reader shows the applied +15 kN \textbf{tension} force.\\
 LabView displays the voltage being applied.
 
 }
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 6  \\ \hline
+Step 7  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Record the load cell value in the LabView in the form of Time vs Load
-graph using the Tovey Closed loop.vi file.
+Record the load cell value in the LabView in the form of Load vs Time
+graph.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
-LabView load graph( Time vs Load) shows 15 KN tension force.
+LabView load graph (Load vs Time) shows +15 kN tension force applied.
 
 }
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 7  \\ \hline
+Step 8  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -5127,12 +4291,12 @@ All moves should move in the commanded direction.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 8  \\ \hline
+Step 9  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
 Record the actual displacement as measured by the two external encoders
-as LabView graph ( Time vs Displacement).
+as LabView graph (Displacement vs Time).
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -5145,7 +4309,7 @@ Actual displacement measured by the average of the two external encoders
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 9  \\ \hline
+Step 10  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -5163,7 +4327,7 @@ Copley Software.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 10  \\ \hline
+Step 11  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -5174,14 +4338,14 @@ test which would introduce compliance errors.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
-The tension load should remain close to 15kN throughout the displacement
-movements and display in the Load vs Time graph in LabView.
+The tension load should remain close to +15kN throughout the
+displacement movements and display in the Load vs Time graph in LabView.
 
 }
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 11  \\ \hline
+Step 12  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -5198,19 +4362,17 @@ two external linear encoder measurements in LabView.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 12  \\ \hline
+Step 13  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Restart at a zero position.~
+Restart at the zero position.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Test Data \\
  {\footnotesize
-\textbf{Note:~}The original zero position/center of stroke position was
-determined to be a linear encoder reading of 40mm. For the purpose of
-this test, the same center of stroke position will be used.
+\textbf{Note:~}Command the actuator to the absolute zero position.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -5223,11 +4385,11 @@ encoder reading in the LabView.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 13  \\ \hline
+Step 14  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-With a 15 kN tension load applied to the actuator, command the following
+With a +15kN tension load applied to the actuator, command the following
 moves the copley software and the control box in absolute mode: +100um,
 +200um, +300um, +400um, -100um, -200um, -300um, -400um.
 
@@ -5241,12 +4403,12 @@ All moves should move in the commanded direction.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 14  \\ \hline
+Step 15  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
 Record the actual displacement as measured by the two external encoders
-as LabView graph ( Time vs Displacement).
+as LabView graph (Displacement vs Time).
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -5259,7 +4421,7 @@ Actual displacement measured by the average of the two external encoders
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 15  \\ \hline
+Step 16  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -5277,7 +4439,7 @@ Copley Software.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 16  \\ \hline
+Step 17  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -5295,7 +4457,7 @@ display in the Load vs Time graph in LabView.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 17  \\ \hline
+Step 18  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -5312,23 +4474,17 @@ two external linear encoder measurements.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 18  \\ \hline
+Step 19  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Remove the 15 kN tension load from the actuator using the LabView
-voltage regulation.vi.\\[2\baselineskip]
+Remove the 15 kN tension load.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Test Data \\
  {\footnotesize
-\begin{itemize}
-\tightlist
-\item
-  Pneumatic valve (closest to hexapod actuator side) to 0V (0-10 Vdc)
-  while the other valve remains at 0V.
-\end{itemize}
+\textbf{Note:~}Set Channel 0 = Channel 1 = 0V.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -5340,19 +4496,17 @@ Load cell reader and Load graph in the LabView showing zero load.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 19  \\ \hline
+Step 20  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Restart at a zero position.
+Restart at the zero position.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Test Data \\
  {\footnotesize
-\textbf{Note:~}The original zero position/center of stroke position was
-determined to be a linear encoder reading of 40mm. For the purpose of
-this test, the same center of stroke position will be used.
+\textbf{Note:~}Command the actuator to the absolute zero position.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -5365,40 +4519,31 @@ encoder reading in the LabView.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 20  \\ \hline
+Step 21  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Apply a \textbf{compression} force with the load actuator until a force
-of 15 KN is reached through LabView voltage regulation.vi file.
+Apply a -15kN force.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Test Data \\
  {\footnotesize
-\textbf{Note:~}In order to apply a compression force of 15 kN:\\
-
-\begin{itemize}
-\tightlist
-\item
-  Set pneumatic valve (far from the hexapod actuator side) to \emph{x}V
-  (0-10 Vdc) while the other valve remains at 0V ( reverse from step 5).
-\item
-  increase air supply using LabVIEW function~
-\end{itemize}
+\textbf{Note:~}In order to apply a compression force of -15 kN, set
+Channel 0 = 2.19V and Channel 1 = 0V.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
-Load cell reader shows the applied 15 KN \textbf{compression} force.\\
+Load cell reader shows the applied -15kN \textbf{compression} force.\\
 LabView displays the voltage being applied.
 
 }
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 21  \\ \hline
+Step 22  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -5416,12 +4561,12 @@ All moves should move in the commanded direction.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 22  \\ \hline
+Step 23  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
 Record the actual displacement as measured by average of ~the two
-external encoder as Labview graph ( Time vs Displacement).
+external encoder as Labview graph (Displacement vs Time).
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -5434,7 +4579,7 @@ Actual displacement measured by the average of the two external encoders
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 23  \\ \hline
+Step 24  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -5452,7 +4597,7 @@ Copley Software.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 24  \\ \hline
+Step 25  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -5470,7 +4615,7 @@ display in the Load vs Time graph in LabView.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 25  \\ \hline
+Step 26  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -5487,11 +4632,11 @@ two external linear encoder measurements.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 26  \\ \hline
+Step 27  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Restart at a zero position.
+Restart at the zero position.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -5512,7 +4657,7 @@ encoder reading in the LabView.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 27  \\ \hline
+Step 28  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -5531,12 +4676,12 @@ All moves should move in the commanded direction.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 28  \\ \hline
+Step 29  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
 Record the actual displacement as measured by average of ~the two
-external encoder as Labview graph ( Time vs Displacement).
+external encoder as Labview graph (Displacement vs. Time).
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -5549,7 +4694,7 @@ Actual displacement measured by the average of the two external encoders
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 29  \\ \hline
+Step 30  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -5567,7 +4712,7 @@ Copley Software.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 30  \\ \hline
+Step 31  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -5585,7 +4730,7 @@ displays in the Load vs Time graph in the LabView.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 31  \\ \hline
+Step 32  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -5602,23 +4747,17 @@ two external linear encoder measurements.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 32  \\ \hline
+Step 33  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Remove the 15 kN compression load from the actuator using the LabView
-voltage regulation.vi file.\\[2\baselineskip]
+Remove the 15 kN compression load.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Test Data \\
  {\footnotesize
-\begin{itemize}
-\tightlist
-\item
-  Pneumatic valve (closest to hexapod actuator side) to 0V (0-10 Vdc)
-  while the other valve remains at 0V.
-\end{itemize}
+\textbf{Note:~}Set Channel 0 = Channel 1 = 0V.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -5631,19 +4770,17 @@ load.\\[2\baselineskip]
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 33  \\ \hline
+Step 34  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Restart at a zero position.
+Restart at the zero position.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Test Data \\
  {\footnotesize
-\textbf{Note:~}The original zero position/center of stroke position was
-determined to be a linear encoder reading of 40mm. For the purpose of
-this test, the same center of stroke position will be used.
+\textbf{Note:~}Command the actuator to the absolute zero position.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -5656,7 +4793,7 @@ encoder reading in the LabView.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 34  \\ \hline
+Step 35  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -5674,12 +4811,12 @@ All moves should move in the commanded direction.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 35  \\ \hline
+Step 36  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
 Record the actual displacement as measured by average of ~the two
-external encoder as Labview graph ( Time vs Displacement).
+external encoder as Labview graph (Displacement vs Time).
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -5692,7 +4829,7 @@ Actual displacement measured by the average of the two external encoders
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 36  \\ \hline
+Step 37  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -5710,7 +4847,7 @@ Copley Software.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 37  \\ \hline
+Step 38  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -5727,19 +4864,17 @@ two external linear encoder measurements.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 38  \\ \hline
+Step 39  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Restart at a zero position.
+Restart at the zero position.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Test Data \\
  {\footnotesize
-\textbf{Note:~}The original zero position/center of stroke position was
-determined to be a linear encoder reading of 40mm. For the purpose of
-this test, the same center of stroke position will be used.
+\textbf{Note:~}Command the actuator to the absolute zero position.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -5752,7 +4887,7 @@ encoder reading in the LabView.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 39  \\ \hline
+Step 40  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -5770,12 +4905,12 @@ All moves should move in the commanded direction.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 40  \\ \hline
+Step 41  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
 Record the actual displacement as measured by average of ~the two
-external encoder as Labview graph ( Time vs Displacement).
+external encoder as Labview graph (Displacement vs Time).
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -5788,7 +4923,7 @@ Actual displacement measured by the average of the two external encoders
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 41  \\ \hline
+Step 42  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -5806,7 +4941,7 @@ Copley Software.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 42  \\ \hline
+Step 43  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -5823,7 +4958,7 @@ two external linear encoder measurements.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 43  \\ \hline
+Step 44  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -5840,7 +4975,7 @@ Graphs in the front panel of the VI file becomes static.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 44  \\ \hline
+Step 45  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -5857,7 +4992,7 @@ LabView Folder directory.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 45  \\ \hline
+Step 46  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -5876,23 +5011,6 @@ starting the next test.
   Expected Result \\
 {\footnotesize
 All the VI files are closed and Labview 2021 application window closes.
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 46  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Review the Specification of the Resolute Encoder Series RL 36B ES 001 C
-10 F encoder to confirm the accuracy of the encoder.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-Accuracy should be less than 12um.
 
 }
 
@@ -5993,14 +5111,21 @@ Step 4  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Open the Labview VI files from the project directory including sub VIs-
-Tovey Closed loop.vi, Voltage Regulation.vi and Biss Reader.vi
+Run the following VI's:
+
+\begin{itemize}
+\tightlist
+\item
+  Encoder A (D13B) and Load Cell.vi
+\item
+  Encoder B (D0BD).vi
+\end{itemize}
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
-Front panel of VI and sub VI files open without any error.
+Front panel of VI's open without any error.
 
 }
 
@@ -6010,14 +5135,21 @@ Step 5  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Open the Labview VI files from the project directory including sub VIs-
-Tovey Closed loop.vi, Voltage Regulation.vi and Biss Reader.vi
+Run the following VI's:
+
+\begin{itemize}
+\tightlist
+\item
+  Encoder A (D13B) and Load Cell.vi
+\item
+  Encoder B (D0BD).vi
+\end{itemize}
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
-Front panel of VI and sub VI files open without any error.
+Front panel of VI's open without any error.
 
 }
 
@@ -6027,14 +5159,21 @@ Step 6  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Open the Labview VI files from the project directory including sub VIs-
-Tovey Closed loop.vi, Voltage Regulation.vi and Biss Reader.vi
+Run the following VI's:
+
+\begin{itemize}
+\tightlist
+\item
+  Encoder A (D13B) and Load Cell.vi
+\item
+  Encoder B (D0BD).vi
+\end{itemize}
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
-Front panel of VI and sub VI files open without any error.
+Front panel of VI's open without any error.
 
 }
 
@@ -6044,15 +5183,15 @@ Step 7  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Click Run button on the on the block diagram toolbar of the Labview VI
-front panel.
+Click Run button on the block diagram toolbar of the Labview VI front
+panel.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
-LabView VI and ~associated sub Vi runs successfully. Initially all the
-graphs and input values will be blank.
+LabView VI and associated sub Vi runs successfully. The graphs should
+start to be populated with data once the run button is pressed.
 
 }
 
@@ -6062,15 +5201,15 @@ Step 8  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Click Run button on the on the block diagram toolbar of the Labview VI
-front panel.
+Click Run button on the block diagram toolbar of the Labview VI front
+panel.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
-LabView VI and ~associated sub Vi runs successfully. Initially all the
-graphs and input values will be blank.
+LabView VI and associated sub Vi runs successfully. The graphs should
+start to be populated with data once the run button is pressed.
 
 }
 
@@ -6080,15 +5219,15 @@ Step 9  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Click Run button on the on the block diagram toolbar of the Labview VI
-front panel.
+Click Run button on the block diagram toolbar of the Labview VI front
+panel.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
-LabView VI and ~associated sub Vi runs successfully. Initially all the
-graphs and input values will be blank.
+LabView VI and associated sub Vi runs successfully. The graphs should
+start to be populated with data once the run button is pressed.
 
 }
 
@@ -6185,13 +5324,11 @@ appropriate voltage values to the compression and tension air valves.
 \begin{itemize}
 \tightlist
 \item
-  {Tension Load - Tension air Valve ( nearest to the actuator) will be
-  set to 1.75V and other valve will be set to 0V.~}\textbf{{~}}
+  {Tension test: Set Channel 1 = 2.19V and Channel 0 = 0V}
 \item
-  Zero Load - Both the air Valves will be set to 0V. \textbf{~}
+  Zero Load test: Set Channel 1 = Channel 0 = 0V \textbf{~}
 \item
-  Compression Load - Compression air Valve ( Farthest to the actuator)
-  will be set to 1.75V and other valve will be set to 0V. ~
+  Compression test - Set Channel 1 = 0V and Channel 0 = 2.19V
 \end{itemize}
 
 }
@@ -6220,13 +5357,11 @@ appropriate voltage values to the compression and tension air valves.
 \begin{itemize}
 \tightlist
 \item
-  {Tension Load - Tension air Valve ( nearest to the actuator) will be
-  set to 1.75V and other valve will be set to 0V.~}\textbf{{~}}
+  {Tension test: Set Channel 1 = 2.19V and Channel 0 = 0V}
 \item
-  Zero Load - Both the air Valves will be set to 0V. \textbf{~}
+  Zero Load test: Set Channel 1 = Channel 0 = 0V \textbf{~}
 \item
-  Compression Load - Compression air Valve ( Farthest to the actuator)
-  will be set to 1.75V and other valve will be set to 0V. ~
+  Compression test - Set Channel 1 = 0V and Channel 0 = 2.19V
 \end{itemize}
 
 }
@@ -6256,13 +5391,11 @@ valves.
 \begin{itemize}
 \tightlist
 \item
-  {Tension Load - Tension air Valve ( nearest to the actuator) will be
-  set to 1.75V and other valve will be set to 0V.~}\textbf{{~}}
+  {Tension test: Set Channel 1 = 2.19V and Channel 0 = 0V}
 \item
-  Zero Load - Both the air Valves will be set to 0V. \textbf{~}
+  Zero Load test: Set Channel 1 = Channel 0 = 0V \textbf{~}
 \item
-  Compression Load - Compression air Valve ( Farthest to the actuator)
-  will be set to 1.75V and other valve will be set to 0V. ~
+  Compression test - Set Channel 1 = 0V and Channel 0 = 2.19V
 \end{itemize}
 
 }
@@ -6284,13 +5417,6 @@ Command the actuator to move to the absolute positions of +500um, 0um,
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Test Data \\
- {\footnotesize
-\textbf{Note:~}This should be done by through the use of the command box
-(pending instructions from Oli)
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
 The actuator moves to within 5um of the commanded absolute positions.
@@ -6305,13 +5431,6 @@ Step 17  \\ \hline
 {\footnotesize
 Command the actuator to move to the absolute positions of +500um, 0um,
 -500um, and then 0um.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Test Data \\
- {\footnotesize
-\textbf{Note:~}This should be done by through the use of the command box
-(pending instructions from Oli)
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -6332,13 +5451,6 @@ Command the actuator to move to the absolute positions of +500um, 0um,
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Test Data \\
- {\footnotesize
-\textbf{Note:~}This should be done by through the use of the command box
-(pending instructions from Oli)
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
 The actuator moves to within 5um of the commanded absolute positions.
@@ -6353,13 +5465,6 @@ Step 19  \\ \hline
 {\footnotesize
 Command the actuator to move to the absolute positions of +500um, 0um,
 -500um, and then 0um.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Test Data \\
- {\footnotesize
-\textbf{Note:~}This should be done by through the use of the command box
-(pending instructions from Oli)
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -6380,13 +5485,6 @@ Command the actuator to move to the absolute positions of +500um, 0um,
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Test Data \\
- {\footnotesize
-\textbf{Note:~}This should be done by through the use of the command box
-(pending instructions from Oli)
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
 The actuator moves to within 5um of the commanded absolute positions.
@@ -6401,13 +5499,6 @@ Step 21  \\ \hline
 {\footnotesize
 Command the actuator to move to the absolute positions of +500um, 0um,
 -500um, and then 0um.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Test Data \\
- {\footnotesize
-\textbf{Note:~}This should be done by through the use of the command box
-(pending instructions from Oli)
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -6428,13 +5519,6 @@ Command the actuator to move to the absolute positions of +500um, 0um,
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Test Data \\
- {\footnotesize
-\textbf{Note:~}This should be done by through the use of the command box
-(pending instructions from Oli)
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
 The actuator moves to within 5um of the commanded absolute positions.
@@ -6449,13 +5533,6 @@ Step 23  \\ \hline
 {\footnotesize
 Command the actuator to move to the absolute positions of +500um, 0um,
 -500um, and then 0um.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Test Data \\
- {\footnotesize
-\textbf{Note:~}This should be done by through the use of the command box
-(pending instructions from Oli)
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -6476,13 +5553,6 @@ Command the actuator to move to the absolute positions of +500um, 0um,
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Test Data \\
- {\footnotesize
-\textbf{Note:~}This should be done by through the use of the command box
-(pending instructions from Oli)
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
 The actuator moves to within 5um of the commanded absolute positions.
@@ -6497,13 +5567,6 @@ Step 25  \\ \hline
 {\footnotesize
 Command the actuator to move to the absolute positions of +500um, 0um,
 -500um, and then 0um.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Test Data \\
- {\footnotesize
-\textbf{Note:~}This should be done by through the use of the command box
-(pending instructions from Oli)
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -6524,13 +5587,6 @@ Command the actuator to move to the absolute positions of +500um, 0um,
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Test Data \\
- {\footnotesize
-\textbf{Note:~}This should be done by through the use of the command box
-(pending instructions from Oli)
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
 The actuator moves to within 5um of the commanded absolute positions.
@@ -6545,13 +5601,6 @@ Step 27  \\ \hline
 {\footnotesize
 Command the actuator to move to the absolute positions of +500um, 0um,
 -500um, and then 0um.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Test Data \\
- {\footnotesize
-\textbf{Note:~}This should be done by through the use of the command box
-(pending instructions from Oli)
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -6572,13 +5621,6 @@ Command the actuator to move to the absolute positions of +500um, 0um,
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Test Data \\
- {\footnotesize
-\textbf{Note:~}This should be done by through the use of the command box
-(pending instructions from Oli)
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
 The actuator moves to within 5um of the commanded absolute positions.
@@ -6596,13 +5638,6 @@ Command the actuator to move to the absolute positions of +500um, 0um,
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Test Data \\
- {\footnotesize
-\textbf{Note:~}This should be done by through the use of the command box
-(pending instructions from Oli)
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
 The actuator moves to within 5um of the commanded absolute positions.
@@ -6617,13 +5652,6 @@ Step 30  \\ \hline
 {\footnotesize
 Command the actuator to move to the absolute positions of +500um, 0um,
 -500um, and then 0um.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Test Data \\
- {\footnotesize
-\textbf{Note:~}This should be done by through the use of the command box
-(pending instructions from Oli)
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -6827,14 +5855,21 @@ Step 2  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Open the Labview VI files from the project directory including sub VIs-
-Tovey Closed loop.vi, Voltage Regulation.vi and Biss Reader.vi
+Run the following VI's:
+
+\begin{itemize}
+\tightlist
+\item
+  Encoder A (D13B) and Load Cell.vi
+\item
+  Encoder B (D0BD).vi
+\end{itemize}
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
-Front panel of VI and sub VI files open without any error.
+Front panel of VI's open without any error.
 
 }
 
@@ -6851,8 +5886,8 @@ front panel.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
-LabView VI and ~associated sub Vi runs successfully. Initially all the
-graphs and input values will be blank.
+LabView VI and associated sub Vi runs successfully. The graphs should
+start to be populated with data once the run button is pressed.
 
 }
 
@@ -6862,22 +5897,13 @@ Step 4  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Apply a 20kN tension load by using the LabView function to increase the
-air supply value of \textasciitilde{}2.25V to one of the pneumatic
-valve.
+Apply a +20kN load.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Test Data \\
  {\footnotesize
-\begin{itemize}
-\tightlist
-\item
-  Set pneumatic valve (closest to hexapod actuator side) to 2.25V (0-10
-  Vdc) while the other valve remains at 0V.
-\item
-  increase air supply using LabVIEW function~
-\end{itemize}
+\textbf{Note:~}Set the tension valve to 2.92 V.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -6950,22 +5976,31 @@ Step 6  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Apply a 20kN compression load by using the LabView function to increase
-the air supply value of \textasciitilde{}2.25V to one of the pneumatic
-valve.
+Monitor the temperature of the actuator. If the temperature exceeds
+1.67W, then stop the test.~
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The sequence of moves are stopped because the temperature of the
+actuator reached above 1.67W.
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 7  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Apply a -20kN load.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Test Data \\
  {\footnotesize
-\begin{itemize}
-\tightlist
-\item
-  Set pneumatic valve (away from hexapod actuator side) to 2.25V (0-10
-  Vdc) while the other valve remains at 0V.
-\item
-  increase air supply using LabVIEW function~
-\end{itemize}
+\textbf{Note:~}Set the tension valve to 2.92 V.\\[2\baselineskip]
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -6978,7 +6013,7 @@ applied.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 7  \\ \hline
+Step 8  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -7034,7 +6069,25 @@ graph shows the positions.~
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 8  \\ \hline
+Step 9  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Monitor the temperature of the actuator. If the temperature exceeds
+1.67W, then stop the test.~
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The sequence of moves are stopped because the temperature of the
+actuator reached above 1.67W.
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 10  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -7045,13 +6098,14 @@ heat being dissipated from the actuator.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
-The actuator does not dissipate more than 10W of heat.
+The amount of heat the actuator dissipates should not contribute more
+than 1.67W to the hexapod (on average)
 
 }
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 9  \\ \hline
+Step 11  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -7068,7 +6122,7 @@ LabView Folder directory.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 10  \\ \hline
+Step 12  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
