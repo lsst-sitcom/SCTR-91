@@ -2,7 +2,7 @@
 % using template at /usr/share/miniconda/envs/docsteady-env/lib/python3.7/site-packages/docsteady/templates/tpnoresult.latex.jinja2.
 % using docsteady version 2.4
 % Please do not edit -- update information in Jira instead
-\documentclass[SE,,STR,toc]{lsstdoc}
+\documentclass[DM,lsstdraft,STR,toc]{lsstdoc}
 \usepackage{geometry}
 \usepackage{longtable,booktabs}
 \usepackage{enumitem}
@@ -31,7 +31,7 @@
 
 \title{LVV-P95: Hexapod Actuator Redesign Verification Test Plan }
 \setDocRef{\lsstDocType-\lsstDocNum}
-\date{ 2023-07-10 }
+\date{ 2023-07-11 }
 \author{ Kevin Siruno }
 
 \input{history_and_info.tex}
@@ -307,7 +307,8 @@ Mostafa Lutfi }
 & {\small Kevin Siruno } & {\small Kevin Siruno } &
 \begin{minipage}[]{6cm}
 \smallskip
-{\small  }
+{\small (1) Systems Engineer\\
+(1) Electrical Technician }
 \medskip
 \end{minipage}
 \\ \hline
@@ -703,7 +704,8 @@ the one anomaly (zero load), modified actuator's large scale accuracy
 results are still acceptable as per the specifications. In addition to
 that, the absolute accuracy is not critical for the operation of the
 hexapods and corresponding hexapod level requirements were deemed to be
-flexible for further relaxation.~
+flexible for further relaxation. We were unable to determine a root
+cause for the reduction in accuracy.
 
 Small-scale accuracy was tested in a similar manner by moving to several
 100um increments in each direction. The results were again load
@@ -10923,7 +10925,7 @@ valves supplying air in order to provide load onto the actuator.
 
 \subsubsection{Test Cases in LVV-C254 Test Cycle}
 
-\paragraph{ LVV-T2805 - Hexapod Initial Validation w/ Surrogate }\mbox{}\\
+\paragraph{ LVV-T2805 - Initial Actuator Test Rig Validation w/ Surrogate }\mbox{}\\
 
 Version \textbf{1}.
 Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2805}{\textit{ LVV-T2805 } }
@@ -10932,7 +10934,7 @@ test case in Jira.
 The objective is to validate the corresponding psi values for the
 voltages of the hexapod actuator test rig. In addition to validating the
 amount of force applied for each voltage, this test will also validate
-the test rig can be safely commanded to 60kN in both compression and
+the test rig can safely apply 60kN of load in both compression and
 tension.
 
 \textbf{ Preconditions}:\\

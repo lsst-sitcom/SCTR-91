@@ -2,7 +2,7 @@
 % using template at /usr/share/miniconda/envs/docsteady-env/lib/python3.7/site-packages/docsteady/templates/tpr.latex.jinja2.
 % using docsteady version 2.4
 % Please do not edit -- update information in Jira instead
-\documentclass[SE,,STR,toc]{lsstdoc}
+\documentclass[DM,lsstdraft,STR,toc]{lsstdoc}
 \usepackage{geometry}
 \usepackage{longtable,booktabs}
 \usepackage{enumitem}
@@ -32,7 +32,7 @@
 
 \title{LVV-P95: Hexapod Actuator Redesign Verification Test Plan and Report}
 \setDocRef{\lsstDocType-\lsstDocNum}
-\date{ 2023-07-10 }
+\date{ 2023-07-11 }
 \author{ Kevin Siruno }
 
 \input{history_and_info.tex}
@@ -307,7 +307,8 @@ Mostafa Lutfi }
 & {\small Kevin Siruno } & {\small Kevin Siruno } &
 \begin{minipage}[]{6cm}
 \smallskip
-{\small  }
+{\small (1) Systems Engineer\\
+(1) Electrical Technician }
 \medskip
 \end{minipage}
 \\ \hline
@@ -939,7 +940,7 @@ switches = \textbf{-40202000 counts or -40.202mm.}
 &   \\\hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2427}{LVV-T2427}
 &  1
-& Initial Pass &
+& Pass &
 \begin{minipage}[]{9cm}
 \smallskip
 The proofing 200\% load test will not be conducted as part of this test
@@ -1006,7 +1007,7 @@ Test Results - Unmodified Actuator.xlsx}}\emph{~}document.
 &   \\\hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2432}{LVV-T2432}
 &  1
-& Initial Pass &
+& Pass &
 \begin{minipage}[]{9cm}
 \smallskip
 The original scope of this test was to verify the position of the
@@ -1218,7 +1219,8 @@ the one anomaly (zero load), modified actuator's large scale accuracy
 results are still acceptable as per the specifications. In addition to
 that, the absolute accuracy is not critical for the operation of the
 hexapods and corresponding hexapod level requirements were deemed to be
-flexible for further relaxation.~
+flexible for further relaxation. We were unable to determine a root
+cause for the reduction in accuracy.
 
 Small-scale accuracy was tested in a similar manner by moving to several
 100um increments in each direction. The results were again load
@@ -1263,8 +1265,8 @@ the remaining actuator units with a fair degree of assurance.
 \subsection{Recommended Improvements}
 \label{sect:recommendations}
 
-The following are recommended improvements for what would do differently
-when doing the acceptance testing of each actuator:
+The following are recommended improvements for what should be done
+differently when doing the acceptance testing of each actuator:
 
 \begin{itemize}
 \tightlist
@@ -1279,17 +1281,18 @@ when doing the acceptance testing of each actuator:
   encoders and the encoder tapes.~
 \item
   We performed load compensation for the accuracy and repeatability
-  tests.We used MOOG's calculated value for the total effective
+  tests. We used MOOG's calculated value for the total effective
   compliance as the test rig design was very similar. For future
   testing, we may calculate the total effective compliance of the test
   rig used in this test campaign to be more precise.~
 \item
   During the accelerated life test, we were monitoring the temperature
-  telemetry displayed in the software used for the test. But, we were
-  not able to record the temperature for the whole run of the test as it
+  telemetry displayed in the software used for the test. We were not
+  able to record the temperature for the whole run of the test as it
   stops recording the temperature in an external file after 5 minutes.
   It will be more helpful if we can determine a method to record the
-  temperature in an external file continuously.~
+  temperature in an external file continuously while also monitoring the
+  values in real time.
 \item
   We had to take screenshots/record manually to get the rotary and
   internal linear encoder readings, as we could not determine a way to
@@ -14389,7 +14392,7 @@ valves supplying air in order to provide load onto the actuator.
 
 \subsubsection{Test Cases in LVV-C254 Test Cycle}
 
-\paragraph{ LVV-T2805 - Hexapod Initial Validation w/ Surrogate }\mbox{}\\
+\paragraph{ LVV-T2805 - Initial Actuator Test Rig Validation w/ Surrogate }\mbox{}\\
 
 Version \textbf{1}.
 Status \textbf{Approved}.
@@ -14399,7 +14402,7 @@ test case in Jira.
 The objective is to validate the corresponding psi values for the
 voltages of the hexapod actuator test rig. In addition to validating the
 amount of force applied for each voltage, this test will also validate
-the test rig can be safely commanded to 60kN in both compression and
+the test rig can safely apply 60kN of load in both compression and
 tension.
 
 \textbf{ Preconditions}:\\
@@ -16337,7 +16340,7 @@ application of different loads.
 Proofing 200\% load test should be performed before running the
 back-driving test.~
 
-Execution status: {\bf Initial Pass }
+Execution status: {\bf Pass }
 
 Final comment:\\The proofing 200\% load test will not be conducted as part of this test
 cycle. Therefore, it was not a pre-requisite to executing this test
@@ -17236,10 +17239,9 @@ LabView.\\[2\baselineskip]
   Actual Result \\
 {\footnotesize
 The Active Load Position = -25.945mm while at the positive most
-position\\[2\baselineskip]As seen in the ‚ÄãPositive
-Limit‚Äã‚Äã‚Äã~(unmodified) sheet of the \emph{Stiffness Test Results
-Modified vs Unmodified.xlsx~}document, the starting position measured by
-the external encoders were as follows:
+position\\[2\baselineskip]As seen in the Positive Limit~sheet of the
+\emph{Stiffness Test Results Modified vs Unmodified.xlsx~}document, the
+starting position measured by the external encoders were as follows:
 
 \begin{itemize}
 \tightlist
@@ -18630,7 +18632,7 @@ determined limits.
 The range limits should be determined to achieve the camera hexapod's
 simultaneous range of motion requirements.
 
-Execution status: {\bf Initial Pass }
+Execution status: {\bf Pass }
 
 Final comment:\\The original scope of this test was to verify the position of the
 positive and negative limit switches using the Copley Control software.
