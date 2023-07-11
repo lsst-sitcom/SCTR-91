@@ -487,6 +487,202 @@ Kevin Siruno }
 \toprule
 \multicolumn{2}{r}{ T. Plan \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testPlan/LVV-P95}{LVV-P95}:} &
 \multicolumn{2}{p{10.9cm}}{\textbf{ Hexapod Actuator Redesign Verification }} & Approved \\\hline
+\textbf{Test Cases} &  \textbf{Ver.} & \textbf{Status} & \textbf{Comment} & \textbf{Issues} \\\toprule
+\multicolumn{2}{r}{ T. Cycle \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCycle/LVV-C254}{LVV-C254}:} &
+\multicolumn{2}{p{10.9cm}}{\textbf{ Unmodified Single Hexapod Actuator Redesign Verification }} & Done \\\hline
+\textbf{Test Cases} &  \textbf{Ver.} & \textbf{Status} & \textbf{Comment} & \textbf{Issues} \\\toprule
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2805}{LVV-T2805}
+&  1
+& Pass &
+\begin{minipage}[]{9cm}
+\smallskip
+The test was executed initially by applying steps for forces in
+compression first and then tension. When applying forces in compression,
+we started with the supply pressure = 20psi. As we applied more load in
+compression, we also gradually increased the air supply. By doing this,
+we were able to safely observe the rate that the load was being applied
+at lower pressures first before increasing to the maximum air pressure.
+As a result, we determined that load could be applied safely onto the
+actuator and at least 90psi is required to be able to apply a load of
++/-60kN.
+\medskip
+\end{minipage}
+&   \\\hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2531}{LVV-T2531}
+&  1
+& Pass &
+\begin{minipage}[]{9cm}
+\smallskip
+This test case includes the installation of the actuator onto the test
+rig and validation of the Copley software control. As seen in the
+results, we validated the position of the positive and negative limit
+switches. After determining the positions of those, we calculated the
+zero position to be exactly half the distance between the two limit
+switches = \textbf{-40202000 counts or -40.202mm.}
+\medskip
+\end{minipage}
+&   \\\hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2427}{LVV-T2427}
+&  1
+& Pass &
+\begin{minipage}[]{9cm}
+\smallskip
+The proofing 200\% load test will not be conducted as part of this test
+cycle. Therefore, it was not a pre-requisite to executing this test
+case. See
+\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testPlayer/testExecution/LVV-E2728}{LVV-E2728}.\\[2\baselineskip]During
+MOOG's original test, the back driving was determined by reading the
+internal rotary encoder and therefore was measured in counts. During
+this test, the displacement was measured by the external linear encoders
+and was measured in mm. As seen in the results, the total displacement
+by either encoder when applying loads never exceeded 0.32mm. The results
+were agreed to be sufficient to repeat this test on the modified
+actuator.
+\medskip
+\end{minipage}
+&   \\\hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2428}{LVV-T2428}
+&  1
+& Pass &
+\begin{minipage}[]{9cm}
+\smallskip
+Moog's results already determined that, effective serial test stand
+stiffness was very high and had less than 1\% impact on the measured
+stiffness of the actuators. We also got similar results while
+calculating stiffness with surrogate.\\
+In conclusion, the stiffness of the actuator was seen in the following
+positions as follows:
+
+\begin{itemize}
+\tightlist
+\item
+  Zero Position = 131.6 N/um
+\item
+  Extended Position (Positive Limit position) = 135.39 N/um
+\item
+  Retracted Position (Negative Limit position) = 126.69 N/um
+\end{itemize}
+
+The calculation of these final results can be found in the
+\href{https://docushare.lsst.org/docushare/dsweb/Services/Document-55068}{\emph{Stiffness
+Test Results Modified vs Unmodified.xlsx}}\emph{~}document
+\medskip
+\end{minipage}
+&   \\\hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2437}{LVV-T2437}
+&  1
+& Pass &
+\begin{minipage}[]{9cm}
+\smallskip
+During the test, the velocity and acceleration limits could not be
+changed in the Copley control software. However, the limits were already
+set to the desired velocity and acceleration. As a result, we verified
+that the actuator was still capable of meeting the minimum velocity of
+the 0.342mm/s. The settling time was also verified by this test.\\
+According to MOOG's original procedure, the settling time started when
+the actuator had reached its commanded position of +/-5mm and ended when
+the displacement was within 0.001mm of that commanded position. As seen
+in the results of this test case, the settling time was always seen to
+be less than 2 seconds. This is supported by the raw data as seen in the
+\href{https://docushare.lsst.org/docushare/dsweb/Services/Document-55090}{\emph{Movement
+Test Results - Unmodified Actuator.xlsx}}\emph{~}document.
+\medskip
+\end{minipage}
+&   \\\hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2432}{LVV-T2432}
+&  1
+& Pass &
+\begin{minipage}[]{9cm}
+\smallskip
+The original scope of this test was to verify the position of the
+positive and negative limit switches using the Copley Control software.
+There were additional steps involved based on MOOG's original procedure
+that cited that the software limit switches would be set and needed to
+be adjusted in order to do so. However, MOOG used additional software to
+set and adjust the software limit switches of the actuator. Therefore,
+those steps were skipped for the purposes of this test and only the
+steps related to determining the physical limit switches were tested.~
+\medskip
+\end{minipage}
+&   \\\hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2434}{LVV-T2434}
+&  1
+& Pass &
+\begin{minipage}[]{9cm}
+\smallskip
+The test was performed starting from the zero position (Active Copley =
+-40.202mm).\\[2\baselineskip]The expected result of this test was that
+given 100nm moves with any load, the actuator would reach the commanded
+position within 50nm. However, there were some deviations to the 100nm
+moves seen to be greater than 50nm. This was expected as MOOG's original
+test results described similar issues related to excessive noise on the
+load cell and on the external encoders. Additionally, a load
+compensation could not be performed with the displacement being measured
+in nm's. Therefore, since the encoders were seen to be able to track the
+actuator movement closely and in the correct commanded direction, this
+test was passed.
+\medskip
+\end{minipage}
+&   \\\hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2436}{LVV-T2436}
+&  1
+& Pass &
+\begin{minipage}[]{9cm}
+\smallskip
+During this test, it can be seen in the results that there were
+variations in the applied load that may have impacted the results of
+this test. As a result of the noise, there were outliers to the expected
+accuracy, specifically for the larger moves in mm. For the smaller moves
+in um, the accuracy was less than the expected error. However, this was
+expected as MOOG's original test report cites the same variation when
+applying load. Therefore, load compensation was applied to the results
+in an effort to reduce the noise's impact on the results. Applying load
+compensation improved the overall results, but there were still some
+outliers that were greater than the expected 17um for the large moves:
+
+\begin{itemize}
+\tightlist
+\item
+  Large scale accuracy maximum error - Tension = 14.3um
+\item
+  Large scale accuracy maximum error - Compression = \textbf{33.9um}
+\item
+  Large scale accuracy maximum error - Zero = \textbf{21.4um}
+\end{itemize}
+
+For the smaller moves, the maximum error was less than the expected
+20um:
+
+\begin{itemize}
+\tightlist
+\item
+  Small scale accuracy maximum error - Tension = 8.7um
+\item
+  Small scale accuracy maximum error - Compression = 14um
+\item
+  Small scale accuracy maximum error - Zero = 10.25um
+\end{itemize}
+\medskip
+\end{minipage}
+&   \\\hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2435}{LVV-T2435}
+&  1
+& Pass &
+\begin{minipage}[]{9cm}
+\smallskip
+There were three iterations of this test, once with a +15kN load
+applied, once with a -15kN load applied and once with no load applied.
+For each test, the actuator was commanded through a series of four 500um
+moves repeated five times. In order to determine the repeatability of
+the actuator, the displacement was measured once the actuator had
+completed its 500um move. As seen in the
+\href{https://docushare.lsst.org/docushare/dsweb/Services/Document-55071}{\emph{Repeatability
+Test Results -Modified vs Unmodified Actuator.xlsx}}\emph{~}file, the
+repeatability error (calculated using rms method) was never seen to be
+greater than 1um so this test was passed.
+\medskip
+\end{minipage}
+&   \\\hline
 \multicolumn{2}{r}{ T. Cycle \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCycle/LVV-C188}{LVV-C188}:} &
 \multicolumn{2}{p{10.9cm}}{\textbf{ Single Hexapod Actuator Redesign Verification }} & Done \\\hline
 \textbf{Test Cases} &  \textbf{Ver.} & \textbf{Status} & \textbf{Comment} & \textbf{Issues} \\\toprule
@@ -903,202 +1099,6 @@ test, this test can be considered to be passed.
 &   \\\hline
 \multicolumn{2}{r}{ T. Cycle \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCycle/LVV-C197}{LVV-C197}:} &
 \multicolumn{2}{p{10.9cm}}{\textbf{ Hexapod System Level Acceptance Test }} & Not Executed \\\hline
-\textbf{Test Cases} &  \textbf{Ver.} & \textbf{Status} & \textbf{Comment} & \textbf{Issues} \\\toprule
-\multicolumn{2}{r}{ T. Cycle \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCycle/LVV-C254}{LVV-C254}:} &
-\multicolumn{2}{p{10.9cm}}{\textbf{ Unmodified Single Hexapod Actuator Redesign Verification }} & Done \\\hline
-\textbf{Test Cases} &  \textbf{Ver.} & \textbf{Status} & \textbf{Comment} & \textbf{Issues} \\\toprule
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2805}{LVV-T2805}
-&  1
-& Pass &
-\begin{minipage}[]{9cm}
-\smallskip
-The test was executed initially by applying steps for forces in
-compression first and then tension. When applying forces in compression,
-we started with the supply pressure = 20psi. As we applied more load in
-compression, we also gradually increased the air supply. By doing this,
-we were able to safely observe the rate that the load was being applied
-at lower pressures first before increasing to the maximum air pressure.
-As a result, we determined that load could be applied safely onto the
-actuator and at least 90psi is required to be able to apply a load of
-+/-60kN.
-\medskip
-\end{minipage}
-&   \\\hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2531}{LVV-T2531}
-&  1
-& Pass &
-\begin{minipage}[]{9cm}
-\smallskip
-This test case includes the installation of the actuator onto the test
-rig and validation of the Copley software control. As seen in the
-results, we validated the position of the positive and negative limit
-switches. After determining the positions of those, we calculated the
-zero position to be exactly half the distance between the two limit
-switches = \textbf{-40202000 counts or -40.202mm.}
-\medskip
-\end{minipage}
-&   \\\hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2427}{LVV-T2427}
-&  1
-& Pass &
-\begin{minipage}[]{9cm}
-\smallskip
-The proofing 200\% load test will not be conducted as part of this test
-cycle. Therefore, it was not a pre-requisite to executing this test
-case. See
-\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testPlayer/testExecution/LVV-E2728}{LVV-E2728}.\\[2\baselineskip]During
-MOOG's original test, the back driving was determined by reading the
-internal rotary encoder and therefore was measured in counts. During
-this test, the displacement was measured by the external linear encoders
-and was measured in mm. As seen in the results, the total displacement
-by either encoder when applying loads never exceeded 0.32mm. The results
-were agreed to be sufficient to repeat this test on the modified
-actuator.
-\medskip
-\end{minipage}
-&   \\\hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2428}{LVV-T2428}
-&  1
-& Pass &
-\begin{minipage}[]{9cm}
-\smallskip
-Moog's results already determined that, effective serial test stand
-stiffness was very high and had less than 1\% impact on the measured
-stiffness of the actuators. We also got similar results while
-calculating stiffness with surrogate.\\
-In conclusion, the stiffness of the actuator was seen in the following
-positions as follows:
-
-\begin{itemize}
-\tightlist
-\item
-  Zero Position = 131.6 N/um
-\item
-  Extended Position (Positive Limit position) = 135.39 N/um
-\item
-  Retracted Position (Negative Limit position) = 126.69 N/um
-\end{itemize}
-
-The calculation of these final results can be found in the
-\href{https://docushare.lsst.org/docushare/dsweb/Services/Document-55068}{\emph{Stiffness
-Test Results Modified vs Unmodified.xlsx}}\emph{~}document
-\medskip
-\end{minipage}
-&   \\\hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2437}{LVV-T2437}
-&  1
-& Pass &
-\begin{minipage}[]{9cm}
-\smallskip
-During the test, the velocity and acceleration limits could not be
-changed in the Copley control software. However, the limits were already
-set to the desired velocity and acceleration. As a result, we verified
-that the actuator was still capable of meeting the minimum velocity of
-the 0.342mm/s. The settling time was also verified by this test.\\
-According to MOOG's original procedure, the settling time started when
-the actuator had reached its commanded position of +/-5mm and ended when
-the displacement was within 0.001mm of that commanded position. As seen
-in the results of this test case, the settling time was always seen to
-be less than 2 seconds. This is supported by the raw data as seen in the
-\href{https://docushare.lsst.org/docushare/dsweb/Services/Document-55090}{\emph{Movement
-Test Results - Unmodified Actuator.xlsx}}\emph{~}document.
-\medskip
-\end{minipage}
-&   \\\hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2432}{LVV-T2432}
-&  1
-& Pass &
-\begin{minipage}[]{9cm}
-\smallskip
-The original scope of this test was to verify the position of the
-positive and negative limit switches using the Copley Control software.
-There were additional steps involved based on MOOG's original procedure
-that cited that the software limit switches would be set and needed to
-be adjusted in order to do so. However, MOOG used additional software to
-set and adjust the software limit switches of the actuator. Therefore,
-those steps were skipped for the purposes of this test and only the
-steps related to determining the physical limit switches were tested.~
-\medskip
-\end{minipage}
-&   \\\hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2434}{LVV-T2434}
-&  1
-& Pass &
-\begin{minipage}[]{9cm}
-\smallskip
-The test was performed starting from the zero position (Active Copley =
--40.202mm).\\[2\baselineskip]The expected result of this test was that
-given 100nm moves with any load, the actuator would reach the commanded
-position within 50nm. However, there were some deviations to the 100nm
-moves seen to be greater than 50nm. This was expected as MOOG's original
-test results described similar issues related to excessive noise on the
-load cell and on the external encoders. Additionally, a load
-compensation could not be performed with the displacement being measured
-in nm's. Therefore, since the encoders were seen to be able to track the
-actuator movement closely and in the correct commanded direction, this
-test was passed.
-\medskip
-\end{minipage}
-&   \\\hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2436}{LVV-T2436}
-&  1
-& Pass &
-\begin{minipage}[]{9cm}
-\smallskip
-During this test, it can be seen in the results that there were
-variations in the applied load that may have impacted the results of
-this test. As a result of the noise, there were outliers to the expected
-accuracy, specifically for the larger moves in mm. For the smaller moves
-in um, the accuracy was less than the expected error. However, this was
-expected as MOOG's original test report cites the same variation when
-applying load. Therefore, load compensation was applied to the results
-in an effort to reduce the noise's impact on the results. Applying load
-compensation improved the overall results, but there were still some
-outliers that were greater than the expected 17um for the large moves:
-
-\begin{itemize}
-\tightlist
-\item
-  Large scale accuracy maximum error - Tension = 14.3um
-\item
-  Large scale accuracy maximum error - Compression = \textbf{33.9um}
-\item
-  Large scale accuracy maximum error - Zero = \textbf{21.4um}
-\end{itemize}
-
-For the smaller moves, the maximum error was less than the expected
-20um:
-
-\begin{itemize}
-\tightlist
-\item
-  Small scale accuracy maximum error - Tension = 8.7um
-\item
-  Small scale accuracy maximum error - Compression = 14um
-\item
-  Small scale accuracy maximum error - Zero = 10.25um
-\end{itemize}
-\medskip
-\end{minipage}
-&   \\\hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2435}{LVV-T2435}
-&  1
-& Pass &
-\begin{minipage}[]{9cm}
-\smallskip
-There were three iterations of this test, once with a +15kN load
-applied, once with a -15kN load applied and once with no load applied.
-For each test, the actuator was commanded through a series of four 500um
-moves repeated five times. In order to determine the repeatability of
-the actuator, the displacement was measured once the actuator had
-completed its 500um move. As seen in the
-\href{https://docushare.lsst.org/docushare/dsweb/Services/Document-55071}{\emph{Repeatability
-Test Results -Modified vs Unmodified Actuator.xlsx}}\emph{~}file, the
-repeatability error (calculated using rms method) was never seen to be
-greater than 1um so this test was passed.
-\medskip
-\end{minipage}
-&   \\\hline
 \caption{Test Campaign Summary}
 \label{table:summary}
 \end{longtable}
