@@ -15925,7 +15925,6 @@ graphs and input values will be blank.
 {\footnotesize
 
 }
-
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
 Step 1.4 & Step Execution Status: \textbf{ Not Executed } \\ \hline
@@ -16254,6 +16253,255 @@ start to be populated with data once the run button is pressed.
   Actual Result \\
 {\footnotesize
 LabView was ran without any issue.‚Äã‚Äã‚Äã‚Äã
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 2.4 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Start at a random actuator stroke position sufficiently away from the
+software stroke limits.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Test Data \\
+ {\footnotesize
+\textbf{Note:~}The actuator stroke from hard stop to hard stop is
++/-19.36mm. The minimum amount required to meet hexapod range
+requirements is +/-16.02mm.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+Appropriate actuator stroke-position selected for the test.~
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+The actuator was positioned at the center stroke position continuing
+from the last test and so this step was skipped.
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 2.5 & Step Execution Status: \textbf{ Pass } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Apply a {zero}⁠ load by using the LabView function to apply the
+appropriate voltage values to the compression and tension air valves.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Test Data \\
+ {\footnotesize
+{\textbf{Note:}}
+
+\begin{itemize}
+\tightlist
+\item
+  {Tension test: Set Channel 1 = 2.19V and Channel 0 = 0V}
+\item
+  Zero Load test: Set Channel 1 = Channel 0 = 0V \textbf{~}
+\item
+  Compression test - Set Channel 1 = 0V and Channel 0 = 2.19V
+\end{itemize}
+
+}
+
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The actuator has {zero}⁠ load applied.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+A zero load was applied by setting both channels to 0V.
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 2.6 & Step Execution Status: \textbf{ Pass } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Command the actuator to move to the absolute positions of +500um, 0um,
+-500um, and then 0um.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The actuator moves to within 5um of the commanded absolute positions.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+The sequence of moves were executed while Labview recorded the
+displacement of the encoders.
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 2.7 & Step Execution Status: \textbf{ Pass } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Command the actuator to move to the absolute positions of +500um, 0um,
+-500um, and then 0um.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The actuator moves to within 5um of the commanded absolute positions.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+The sequence of moves were executed while Labview recorded the
+displacement of the encoders.
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 2.8 & Step Execution Status: \textbf{ Pass } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Command the actuator to move to the absolute positions of +500um, 0um,
+-500um, and then 0um.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The actuator moves to within 5um of the commanded absolute positions.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+The sequence of moves were executed while Labview recorded the
+displacement of the encoders.
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 2.9 & Step Execution Status: \textbf{ Pass } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Command the actuator to move to the absolute positions of +500um, 0um,
+-500um, and then 0um.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The actuator moves to within 5um of the commanded absolute positions.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+The sequence of moves were executed while Labview recorded the
+displacement of the encoders.
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 2.10 & Step Execution Status: \textbf{ Pass } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Command the actuator to move to the absolute positions of +500um, 0um,
+-500um, and then 0um.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The actuator moves to within 5um of the commanded absolute positions.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+The sequence of moves were executed while Labview recorded the
+displacement of the encoders.
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 2.11 & Step Execution Status: \textbf{ Pass } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Record the results from all three sets of tests.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Test Data \\
+ {\footnotesize
+\textbf{Note}: A script will be used to continuously pull the encoder
+readings and export them into an Excel sheet.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The results of all the tests shows there are no errors in movements more
+than 5um.~
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+The results of the second test with no load can be seen below:\\
+\includegraphics[width=5.98958in]{jira_imgs/4104.png}It can be seen in
+general that the commanded moves were very repeatable, always being
+fairly close to the previously visited position. This Encoder Position
+vs Time (Modified Actuator- Zero) plot can be found in the
+\emph{Repeatability Test Results -Modified vs Unmodified
+Actuator.xlsx~}file
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 2.12 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Close all the Labview VI files.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Test Data \\
+ {\footnotesize
+\textbf{Note:~}Labview can be left open in order to continue to the next
+test. However, it may be necessary to reset the application before
+starting the next test.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+All the VI files are closed and Labview 2021 application window closes.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+The LabView files were stopped, but were not closed.
 
 }
 
